@@ -1,0 +1,19 @@
+/*
+	Performance Improvements
+*/
+library.stdheader {        
+	5 {
+		prefixComment >
+	} 
+	stdWrap {
+	   prefixComment >
+	}                 
+}
+tt_content.stdWrap.prefixComment > 
+config {      
+	tx_extbase.persistence.enableAutomaticCacheClearing = 0
+	
+	disablePrefixComment = 1     
+	
+	#sendCacheHeaders = {$nxbase.sendCacheHeaders}
+}

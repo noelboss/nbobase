@@ -1,0 +1,69 @@
+
+styles.content.imgtext.maxW = 1170
+styles.content.loginform.pid = 0
+styles.content.imgtext.maxWInText = 0
+styles.content.imgtext.linkWrap.lightboxEnabled = 1
+styles.content.imgtext.linkWrap.lightboxCssClass = fancybox
+styles.content.imgtext.linkWrap.width = 800
+
+###############################################
+# Allgemeine Konfiguration
+###############################################
+
+# Configurations come from EXT:nxbase/static/settings/constants.txt
+config {
+	tx_realurl_enable 			= 0
+	tx_cooluri_enable			= 1
+	redirectOldLinksToNew 		= 1
+	
+	no_cache 					= 0
+
+	removeDefaultJS 			= 1
+	moveJsFromHeaderToFooter	= 1
+	compressJs					= 1
+
+	inlineStyle2TempFile		= 1
+	compressCss					= 1
+	concatenateJsAndCss			= 1
+
+	index_enable				= 0
+	index_externals				= 0
+
+	doctype 					= html5
+	metaCharset 				= utf-8
+	additionalHeaders 			= Content-Type:text/html;charset=utf-8
+	renderCharset				= utf-8
+	xhtml_cleaning				= 1
+	spamProtectEmailAddresses 	= 0
+	headerComment 				=
+	enableContentLengthHeader	= 1
+	notification_email_encoding = utf-8
+	notification_email_charset 	= utf-8
+	admPanel				 	= 1
+
+	#// Removes the <?xml ...> tag, also because of IE Bug
+	xmlprologue = none
+
+	# Page content is usually cached. The default cache period is set to 24 hours.
+	cache_period = 0
+
+	# Use simulateStaticDocuments instead of Real-URL
+	simulateStaticDocuments = 0
+
+	# Send cache headers with server
+	sendCacheHeaders = 1
+
+	# If set, the stdWrap property "prefixComment" will be disabled, thus preventing any revealing and spaceconsuming comments in the HTML source code
+	disablePrefixComment = 0
+
+	# this will prefix either a relative or absolute path
+	prefixLocalAnchors = all
+
+	# Prefix local Path's with a /
+	absRefPrefix = /
+
+	#// Removes default Title. Is set in headerdara/setup.txt
+	noPageTitle = 1
+
+	admPanel = 1
+}

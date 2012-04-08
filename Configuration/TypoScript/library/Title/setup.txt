@@ -1,0 +1,13 @@
+library.Title = COA
+library.Title {
+	10 = HTML
+	10.value = {page:title}
+	10.value.insertData = 1
+}
+
+library.subTitle = COA
+library.subTitle {
+	10 = HTML
+	10.value = {page:subtitle}
+	10.value.insertData = 1
+}

@@ -1,0 +1,12 @@
+# Setup
+library.Visual = COA
+library.Visual {    
+	wrap = background-image: url(/|);
+	10 = IMG_RESOURCE  
+	10.file {    
+		import.data = levelmedia: -1, "slide"
+		import = uploads/media/
+		import.override.field = media
+		import.listNum = 0       
+	}
+}

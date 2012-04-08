@@ -1,0 +1,10 @@
+library.stdheader {        
+	# Remove h1 from Content Elements cause it's only allowed once on every page...
+ 	10 { 
+		1.fontTag = <h2{register:headerStyle}{register:headerClass}>|</h2>
+		2.fontTag = <h3{register:headerStyle}{register:headerClass}>|</h3>
+		3.fontTag = <h4{register:headerStyle}{register:headerClass}>|</h4>
+		4.fontTag = <h5{register:headerStyle}{register:headerClass}>|</h5>
+		5.fontTag = <h5{register:headerStyle}{register:headerClass}>|</h5>
+	}               
+}

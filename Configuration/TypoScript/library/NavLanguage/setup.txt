@@ -1,0 +1,46 @@
+library.NavLanguage = HMENU
+library.NavLanguage {
+	noBlur = 1
+	special = language
+	special.value = 0,1,2         
+	special.normalWhenNoLanguage = 0   
+	
+	addQueryString = true
+	addQueryString {
+		method = GET,POST
+		exclude = cHash
+	}
+	
+	1 = TMENU
+	1 {      
+		noBlur = 1
+	    stdWrap{
+			#required = 1
+	    	wrap ( 
+			<div class="mod modNavLanguage">
+				<ul>
+					|
+				</ul>
+			</div>
+			)    
+		}    
+		
+		NO { 
+			wrapItemAndSub = <li>|</li> |*| <li>|</li> |*| <li>|</li>
+			stdWrap.cObject = TEXT
+			stdWrap.cObject {
+				value = {$library.NavLanguage.0} || {$library.NavLanguage.1} || {$library.NavLanguage.2}
+			}  
+		}  
+		# don't display not translated Pages:  
+		#USERDEF1 < .NO 
+		USERDEF1 = 1             
+		USERDEF1 {   
+			doNotLinkIt = 1 
+			stdWrap.cObject = TEXT
+			stdWrap.cObject {
+				value =   
+			}
+		}  
+	}    
+}          

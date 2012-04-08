@@ -1,0 +1,40 @@
+library.NavBreadcrumb = COA
+library.NavBreadcrumb {   
+	stdWrap{
+		required = 1
+    	wrap (
+		<div class="mod modNavBreadcrumb">
+			<div class="inner">
+				<div class="bd">
+					|
+				</div>
+			</div>
+		</div>
+		)  
+	}
+	
+	10 < basics.library.Links.home
+	10.wrap = |&#32;»&nbsp;
+	
+	20 = HMENU
+	20 {
+		special = rootline   
+		# Level 1 to actual page (-1)
+		special.range  = 1|-1
+        includeNotInMenu = 1
+		excludeDoktypes = 4,6,199,254,255
+		1 = TMENU
+		1 {         
+			NO {        
+				htmlSpecialChars = 1   
+				htmlSpecialChars.preserveEntities = 1
+				after = &#32;»&nbsp;|*|&#32;»&nbsp;|*|&nbsp;
+			}
+			CUR < .NO    
+			CUR = 1
+			CUR  {
+				ATagParams = class="active"
+			}
+		}
+	}
+}

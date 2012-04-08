@@ -1,0 +1,29 @@
+# Get Content
+library.Content.c0 < styles.content.get
+library.Content.c0.select.where = colPos=0
+
+library.Content.c1 < styles.content.get
+library.Content.c1.select.where = colPos=1
+
+library.Content.c2 < styles.content.get
+library.Content.c2.select.where = colPos=2
+
+library.Content.c3 < styles.content.get
+library.Content.c3.select.where = colPos=3
+
+
+library.Content.c4 < styles.content.get
+library.Content.c4.select.where = colPos=4
+
+
+library.Content.c5 < styles.content.get
+library.Content.c5.select.where = colPos=5
+
+library.Content.c4 < styles.content.get
+library.Content.c4.select.where = colPos=4
+
+library.Content.c5 < styles.content.get
+library.Content.c5.select.where = colPos=5
+
+library.Content.c6 < styles.content.get
+library.Content.c6.select.where = colPos=6

@@ -1,0 +1,266 @@
+# Entfernt die Help Module & Versionierung: Benötigt Extension "modulecleaner" (Mit Typo3 4.3 erübrigt sich das)
+# tx_modulecleaner.disable = help_cshmanual, help_aboutmodules, help_about, help, web_txversionM1, user_ws, user_task
+			                                                                                                         
+
+admPanel { 
+	enable{
+		edit = 1
+		preview = 1 
+	}
+
+	module {
+		edit.forceDisplayIcons = 0 
+		edit.forceDisplayFieldIcons = 0 
+		preview = 1 
+	}
+
+	override {
+		preview.showHiddenPages = 0 
+		preview.showHiddenRecords = 0 
+		edit.displayFieldIcons = 0 
+		edit.displayIcons = 0
+		# disable TypoScript Cache
+		tsdebug.forceTemplateParsing = 1
+	}
+	hide = 1
+}
+
+setup.override {
+	edit_wideDocument = 1
+	edit_docModuleUpload = 0 
+	enableFlashUploader = 0 
+	startModule =web_txtemplavoilapagemodM1   
+	thumbnailsByDefault =1
+}
+
+options {         
+	RTESmallWidth = 98&%
+	RTESmallHeight = 500
+	RTELargeWidthIncrement = 0
+	
+	# disable warning by typeChange and copy/move/paste
+	# options.alertPopups = 255 - 1 -2 = 252
+	alertPopups = 252
+	# Enable Cache Options for Authors
+  	clearCache {
+		all = 1
+  		pages = 1 
+		nxbase = 1
+		nxbaseCssSuffix = ie,ie6,ie7,ie8,ie9
+	}
+  	# shortcut frame for each BE-user
+  	shortcutFrame = 0
+  	shortcut_onEditId_keepExistingExpanded = 0
+	# Adds a "Save and New" Icon to the toolbar
+	saveDocNew = 0 
+	saveDocView = 0
+	# Enable for individual Tables (Records)
+  	# saveDocNew.[table] = 1
+	# Erstellen von Folders über das Upload Folder
+  	createFoldersInEB = 1
+  	//modify context Menus          
+    # Shows the ID in front of the Page Title
+	pageTree{
+		showPageIdWithTitle = 0      
+		disableIconLinkToContextmenu = 0
+	}
+
+	folderTree {
+		disableIconLinkToContextmenu = 1
+	}                
+	
+  	# contextMenu.pageTree.disableItems = view, edit
+	contextMenu.pageTree.disableItems = info
+	
+	# No-brainer. Thumbnails make life easier.
+	file_list.enableDisplayThumbnails = 1
+}
+
+page.TCEFORM {    
+	pages {
+		layout.disabled = 1
+		title.disabled = 0      
+		subtitle.disabled = 0
+		nav_title.disabled = 0
+		nav_hide.disabled = 0
+		doktype.disabled = 0
+		# doktype:
+			#1 = Standard
+			#2 = Erweitert
+			#3 = Externe URL
+			#4 = Shortcut
+			#5 = Nicht im Menü 
+			#6 = Backend Benutzer Bereich
+			#7 = Mount Seite
+			#199 = Abstand
+			#254 = Sysordner
+			#255 = Recycler
+			#--div-- = Trennlinie 
+		doktype.removeItems = 5, 6, 255, --div-- 
+		
+		# doktype 3
+		url.disabled = 0
+		urltype.disabled = 0        
+		# doktype 4
+		shortcut.disabled = 0
+		shortcut_mode.disabled = 0          
+		# doktype 7
+		mount_pid.disabled = 0
+		mount_pid_ol.disabled = 0
+		
+		hidden.disabled = 0
+		starttime.disabled = 0
+		endtime.disabled = 0
+		alias.disabled = 1
+		
+		TSconfig.disabled = 1
+		storage_pid.disabled = 0
+		is_siteroot.disabled = 0
+		php_tree_stop.disabled = 1
+		tx_impexp_origuid.disabled = 1
+		                          
+		no_search.disabled = 1
+		no_cache.disabled = 0   
+		cache_timeout.disabled = 1
+		tx_realurl_nocache.disabled = 1  
+		
+		fe_group.disabled = 1
+		target.disabled = 1         
+		media.disabled = 0          
+		newUntil.disabled = 1 
+		lastUpdated.disabled = 1        
+		
+		keywords.disabled = 0
+		description.disabled = 0    
+		abstract.disabled = 1
+		author.disabled = 1  
+		author_email.disabled = 1
+						
+		module.disabled = 1
+		content_from_pid.disabled = 0
+
+		fe_login_mode.disabled = 1
+
+		tx_templavoila_ds.disabled = 1
+		tx_templavoila_to.disabled = 0
+		tx_templavoila_next_ds.disabled = 1
+		tx_templavoila_next_to.disabled = 0
+		tx_templavoila_flex.disabled = 1
+
+		tx_cssselect_stylesheets.disabled = 0
+
+		tx_realurl_pathsegment.disabled = 0
+		tx_realurl_exclude.disabled = 1
+
+		extendToSubpages.disabled = 1
+		l18n_cfg.disabled = 1
+	}
+	
+	tt_content {
+		#Content Element
+		starttime.disabled = 0
+		endtime.disabled = 0
+		fe_group.disabled = 1
+		CType.disabled = 0
+		#CType.removeItems = header, text, textpic, image, bullets, table, uploads, multimedia, mailform, search, login, splash, menu, shortcut, script, div, html, list,
+		CType.removeItems =  header, text, textpic, image, bullets, table, uploads, multimedia, mailform, search, login, splash, menu, shortcut, script, div, html
+		hidden.disabled = 0
+		date.disabled = 1
+		linkToTop.disabled = 1
+		section_frame.disabled = 1
+		colPos.disabled = 1
+		spaceBefore.disabled = 1
+		spaceAfter.disabled = 1
+		sys_language_uid.disabled = 1
+		sectionIndex.disabled = 1
+		
+		#Header
+		header.disabled = 0
+		header_link.disabled = 1
+		subheader.disabled = 1
+		header_layout.disabled = 0
+		#header_layout.removeItems = 0,1,2,3,4,5,100
+		header_layout.removeItems = 0,1,
+		#header_layout.altLabels.1 = &Uuml;berschrift 1
+		header_layout.altLabels.2 = &Uuml;berschrift 1
+		header_layout.altLabels.3 = &Uuml;berschrift 2
+		header_layout.altLabels.4 = &Uuml;berschrift 3
+		header_layout.altLabels.5 = &Uuml;berschrift 4
+		
+		header_position.disabled = 1
+		
+		#Text
+		text_align.disabled = 1
+		text_face.disabled = 1
+		text_size.disabled = 1
+		text_color.disabled = 1
+		text_properties.disabled = 1
+		rte_enabled.disabled = 1
+		bodytext.disabled = 0
+		
+		#Image        
+		image.disabled = 0
+		imagewidth.disabled = 0
+		imageheight.disabled = 0
+		imageorient.disabled = 0
+		#imageorient.removeItems = 
+			#0 = Above, center 
+			#1 = Above, right 
+			#2 = Above, left 
+			#8 = Below, center 
+			#9 = Below, right 
+			#10 = Below, left 
+			#17 = In text, right 
+			#18 = In text, left 
+			#25 = In text, right (nowrap) 
+			#26 = In text, left (nowrap) 
+		
+		#imageorient.removeItems = 0,1,2,8,9,10,17,18,25,26
+		imageorient.removeItems = 8,9,10,25,26
+		imageorient = 2
+		
+		imagecaption_position.disabled = 1
+		image_link.disabled = 0
+		image_zoom.disabled = 0
+		image_noRows.disabled = 1
+		image_effects.disabled = 1
+		image_compression.disabled = 1
+ 
+		imagecaption.disabled = 0
+		imagecols.disabled = 0
+		imageborder.disabled = 1
+		altText.disabled = 0
+		titleText.disabled = 1
+		image_frames.disabled = 1
+		media.disabled = 0
+		multimedia.disabled = 0
+		longdescURL.disabled = 1
+		
+		#FCE
+		tx_templavoila_ds.disabled = 1
+		tx_templavoila_to.disabled = 0
+		tx_templavoila_flex.disabled = 0
+		tx_templavoila_pito.disabled = 0
+		
+		
+		#Links
+		filelink_size.disabled = 0
+		
+		#Table
+		table_border.disabled = 1
+		table_cellspacing.disabled = 1
+		table_cellpadding.disabled = 1
+		table_bgColor.disabled = 1
+		layout.disabled = 1
+		cols.disabled = 1
+		
+		#Sonstiges
+		pages.disabled = 0
+		menu_type.disabled = 0
+		list_type.disabled = 0
+		records.disabled = 0
+		recursive.disabled = 0
+		select_key.disabled = 0
+		splash_layout.disabled = 0
+	}
+}

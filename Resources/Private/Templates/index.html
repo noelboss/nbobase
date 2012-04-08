@@ -1,0 +1,35 @@
+<!-- ###LAYOUT### -->
+<div class="container">
+	<f:render partial="navbar" />
+
+	<div class="hero-unit">
+		<h1>
+			<f:cObject typoscriptObjectPath="library.subTitle" />
+		</h1>
+		<f:cObject typoscriptObjectPath="library.Content.c1" />
+	</div>
+
+
+	<div class="container">
+		<section>
+			<div class="row">
+				<div class="span6">
+					<f:cObject typoscriptObjectPath="library.Content.c2" />
+				</div>
+				<div class="span6">
+					<f:cObject typoscriptObjectPath="library.Content.c3" />
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="row">
+				<div class="span12">
+					<f:cObject typoscriptObjectPath="library.Content.c0" />
+				</div>
+			</div>
+		</section>
+	</div>
+	<hr>
+	<f:render partial="Footer" />
+</div> <!-- /container -->
+<!-- ###LAYOUT### -->

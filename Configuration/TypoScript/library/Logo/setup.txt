@@ -1,0 +1,7 @@
+library.Logo < basics.library.Links.home
+library.Logo {
+	#value = Sagen Ja
+	typolink {
+		ATagParams = class="brand"
+	}
+}

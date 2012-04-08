@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cooluri>
+	<cache>
+		<usecache>1</usecache>
+		<!-- READONLY -->
+		<params2cool>
+			<!-- how often (in days) should be links updated (Typo3 cache needs to be cleared) -->
+			<checkforchangeevery>0.1</checkforchangeevery>
+		</params2cool>
+		<cool2params>
+			<!-- how many days should old links (those that are redirected to existing) should be kept active -->
+			<oldlinksvalidfor>365</oldlinksvalidfor>
+		</cool2params>
+		<pagenotfound>
+			<!-- the status has to meet HTTP protocol header -->
+			<status>HTTP/1.0 404 Not Found</status>
+			<behavior type="userfunc">tx_cooluri-&gt;pageNotFound</behavior>
+			<!--behavior type="message"><![CDATA[ <h1>Page not found!</h1> ]]></behavior-->
+			<!-- possible @type values: 
+        page - will show a file (loaded using file_get_contents)
+        redirect - will redirect to a certaing URL
+        message - will output a message
+        userfunc - user function is called, there's a default implementation of standard TYPO3 404 handling
+        <behavior type="userfunc">tx_cooluri->pageNotFound</behavior>
+      -->
+		</pagenotfound>
+	</cache>
+	<!-- bind a domain with a language
+    @key - language id - L parameter value
+    value - domain name
+  -->
+	<!--
+  <domainlanguages>
+    <domain lang="0">www.example.com</domain>
+    <domain lang="1">www.example.cz</domain>
+    <domain lang="2">www.example.de</domain>
+  </domainlanguages>
+  -->
+	<pagepath>
+		<!-- first non-empty value will be used -->
+		<title>tx_realurl_pathsegment,title,alias,subtitle</title>
+		<saveto>id</saveto>
+		<!-- READONLY -->
+		<default>0</default>
+		<!-- READONLY -->
+		<userfunc>tx_cooluri-&gt;getPageTitle</userfunc>
+		<t3conv>1</t3conv>
+	</pagepath>
+	<uriparts>
+		<part>
+			<parameter>tx_nbogallery_gallery[gallery]</parameter>
+			<lookindb>
+				<to>SELECT title FROM tx_nbogallery_domain_model_gallery WHERE uid=$1</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[event]</parameter>
+			<lookindb>
+				<to>SELECT title FROM tx_sjevents_domain_model_event WHERE uid=$1</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[controller]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[action]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[location]</parameter>
+			<lookindb>
+				<to>SELECT title FROM tx_sjevents_domain_model_location WHERE uid=$1</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[newReservation]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[reservation]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[newPerson]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjevents_events[e]</parameter>
+		</part>
+		
+		<part>
+			<parameter>tx_sjwishlist_whishlist[wish]</parameter>
+			<lookindb>
+				<to>SELECT title FROM tx_sjwishlist_domain_model_wish WHERE uid=$1</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
+		<part>
+			<parameter>tx_sjwishlist_whishlist[controller]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjwishlist_whishlist[action]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjwishlist_whishlist[newParticipation]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjwishlist_whishlist[participation]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjwishlist_whishlist[newPerson]</parameter>
+		</part>
+		<part>
+			<parameter>tx_sjwishlist_whishlist[e]</parameter>
+		</part>
+		
+	</uriparts>
+	<predefinedparts>
+		<part>
+			<parameter>cHash</parameter>
+		</part>
+		<part>
+			<parameter>no_cache</parameter>
+		</part>
+		<part>
+			<parameter>tx_nbogallery_gallery[action]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nbogallery_gallery[controller]</parameter>
+		</part>
+	</predefinedparts>
+	<valuemaps>
+		<valuemap>
+			<parameter>L</parameter>
+			<value key="">0</value>
+			<value key="en">1</value>
+		</valuemap>
+		<valuemap>
+			<parameter>tx_sjevents_events[controller]</parameter>
+			<value key="">Event</value>
+			<value key="">Location</value>
+			<value key="anmeldung">Reservation</value>
+		</valuemap>
+		<valuemap>
+			<parameter>tx_sjwishlist_whishlist[controller]</parameter>
+			<value key="">Wish</value>
+			<value key="teilnehmen">Participation</value>
+		</valuemap>
+		<valuemap>
+			<parameter>tx_sjwishlist_whishlist[action]</parameter>
+			<value key="">show</value>
+			<value key="">list</value>
+			<value key="neu">new</value>
+			<value key="erstellen">create</value>
+			<value key="bearbeiten">edit</value>
+			<value key="loeschen">delete</value>
+		</valuemap>
+		<valuemap>
+			<parameter>tx_sjevents_events[action]</parameter>
+			<value key="">show</value>
+			<value key="">list</value>
+			<value key="neu">new</value>
+			<value key="erstellen">create</value>
+			<value key="bearbeiten">edit</value>
+			<value key="loeschen">delete</value>
+		</valuemap>
+		<valuemap>
+			<parameter>tx_sjevents_events[e][reskey]</parameter>
+			<value key="fehler">1</value>
+		</valuemap>
+	</valuemaps>
+	<!-- this will put L param to the first position
+      for more magic see manual -->
+	<paramorder>
+		<param>L</param>
+	</paramorder>
+	<!-- READONLY START -->
+	<cooluris>1</cooluris>
+</cooluri>

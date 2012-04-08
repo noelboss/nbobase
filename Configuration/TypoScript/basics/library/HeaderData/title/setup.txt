@@ -1,0 +1,17 @@
+basics.library.HeaderData.title = COA
+basics.library.HeaderData.title {
+	wrap = <title>|</title>
+
+	# Startpage
+	10 = TEXT
+	10.data = leveltitle : 0
+
+	# Subpage
+	20 = TEXT
+	20 {
+		field = subtitle//title
+		noTrimWrap =| – ||
+	}
+
+
+}

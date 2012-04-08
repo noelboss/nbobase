@@ -1,0 +1,15 @@
+####################################################
+# Backend Konfiguration
+####################################################
+mod.web_list {     
+	allowedNewTables >
+}                            
+
+TCEMAIN{
+	default {
+	  disablePrependAtCopy = 1
+	  disableHideAtCopy = 0
+	}
+	translateToMessage =
+	clearCacheCmd = pages 
+}

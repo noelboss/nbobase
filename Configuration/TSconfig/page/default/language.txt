@@ -1,0 +1,9 @@
+## Default Language
+mod.SHARED {
+  defaultLanguageFlag = de
+  defaultLanguageLabel = Deutsch
+}
+
+mod.web_list {
+	bigControlPanel= 0
+}

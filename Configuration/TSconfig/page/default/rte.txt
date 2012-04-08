@@ -1,0 +1,156 @@
+# RTE CONFIGURATION
+	  
+RTE {          
+	classesLinks >
+	classesTable >
+	classesAnchor >
+	colors >
+	classes >   
+                  
+	allowedClasses >
+	allowedClasses = advantage,linklist,download,button
+
+	classes {
+		advantage {
+			name = Mitgliedervorteil
+		}
+		linklist {
+			name = Liste mit Links
+		}
+		download {
+			name = Liste mit Downloads
+		}
+		button {
+			name = Link als Button darstellen
+		}
+	}  
+	
+	classesCharacter = button
+	classesAnchor = button
+	classesLinks = button
+}
+
+RTE.default {  
+	contentCSS = EXT:nxbase/Resources/Private/Templates/elements/css/rte.css
+	useCSS = 1     
+	
+	classesAnchor >
+	classesLinks >
+	allowedClasses >    
+	classes >    
+	                         
+	classes < RTE.classes
+	classesAnchor < RTE.classesAnchor
+	classesLinks < RTE.classesLinks
+	allowedClasses < RTE.allowedClasses
+  
+	enableWordClean = 1  
+	enableWordClean.HTMLparser < RTE.default.proc.entryHTMLparser_db 
+	
+	removeTrailingBR = 1
+	removeComments = 1
+	removeTags = center, sdfield, caption
+	removeTagsAndContents = style,script
+                   
+	removeTagsAndContents = link, meta, script, style, title
+		
+	hidePStyleItems = H1, H5,H6, PRE, Address, DIV, BLOCKQUOTE
+	     	
+	proc {
+        overrideMode = ts_css
+        allowedClasses = advantage,linklist,download,button
+       	denyTags = u,img,center,font,hr,sub,sup,strike,h1,h5,h6,pre,blockquote,caption
+        
+		entryHTMLparser_db = 1
+       	entryHTMLparser_db {
+			allowTags = p,b,i,strong,em,h2,h3,h4,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li 
+		}   
+		
+		exitHTMLparser_db = 1
+		exitHTMLparser_db {
+			allowTags = p,b,i,strong,em,h2,h3,h4,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li 
+			tags {
+				b.remap = strong
+				i.remap = em
+			}
+		}      
+		
+		exitHTMLparser_rte = 1
+		exitHTMLparser_rte {
+			allowTags = p,b,i,strong,em,h2,h3,h4,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li
+			tags {
+				strong.remap = b
+				em.remap = i
+			}
+		}     
+	}
+
+	# zeigt alle CSS-Klassen die in formate.css vorhanden sind
+	showTagFreeClasses = 0                                      
+	hideTags = font                                             
+		
+	#hideButtons (                                                     
+	#	underline, left, center, right,
+	#	class, blockstylelabel, blockstyle, textstylelabel, textstyle,
+	#	formatblock, bold, italic, subscript, superscript,
+	#	orderedlist, unorderedlist, outdent, indent, textindicator,
+	#	insertcharacter, link, table, findreplace, chMode, removeformat, undo, redo, about,
+	#	toggleborders, tableproperties,
+	#	rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit,
+	#	columninsertbefore, columninsertafter, columndelete, columnsplit,
+	#	cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
+	#)
+	hideButtons >
+	showButtons (    
+		undo, redo, copy, cut, paste, bar, findreplace, removeformat, bar, chMode, linebreak,         
+		formatblock, blockstyle, bar, bold, italic, bar, orderedlist, unorderedlist, bar, link, bar, 
+		linebreak, table, bar, toggleborders, bar, tableproperties, bar,
+		rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, bar,
+		columninsertbefore, columninsertafter, columndelete, columnsplit, bar, 
+		cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
+	) 
+	toolbarOrder (         
+		undo, redo, copy, cut, paste, bar, findreplace, removeformat, bar, chMode, linebreak,         
+		formatblock, blockstyle, bar, bold, italic, bar,  orderedlist, unorderedlist, bar, link, bar, 
+		linebreak, table, bar, toggleborders, bar, tableproperties, bar,
+		rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, bar,
+		columninsertbefore, columninsertafter, columndelete, columnsplit, bar, 
+		cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
+	)
+	keepButtonGroupTogether = 1  
+	keepToggleBordersInToolbar = 1 
+	
+	buttons.toggleborders.setOnTableCreation = 1    
+	
+	buttons.link.popupSelector.disabled = 1
+	buttons.link.targetSelector.disabled = 0
+	buttons.link.options.removeItems = 1
+	
+	hideTableOperationsInToolbar = 0
+
+	// Description
+	disableDescriptionFieldsetInTableOperations = 1  
+	  // Style
+	disableStyleFieldsetInTableOperations = 1  
+	
+	// Spacing and padding
+	disableSpacingFieldsetInTableOperations = 1
+	// Alignment
+	disableAlignmentFieldsetInTableOperations = 0
+	// Background and colors
+	disableColorFieldsetInTableOperations = 1
+	// Layout
+	disableLayoutFieldsetInTableOperations = 1
+	// Frame and borders
+	disableBordersFieldsetInTableOperations = 1
+	  
+	showStatusBar = 1
+}                      
+
+TCEFORM.tt_content.bodytext.RTEfullScreenWidth= 80%
+
+RTE.default.FE < RTE.default
+RTE.default.FE.showStatusBar = 0
+RTE.default.FE.FE >
+RTE.default.FE.userElements >
+RTE.default.FE.userLinks >

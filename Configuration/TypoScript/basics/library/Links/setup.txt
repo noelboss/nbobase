@@ -1,0 +1,36 @@
+basics.library.Links {
+	link = TEXT
+	link {
+		typolink{
+			returnLast = url
+		}
+	}
+
+	self < .link
+	self.typolink.data = page:uid
+
+	country = TEXT
+	country {
+		typolink{
+			parameter.data = leveluid : 1
+			ATagParams = class="currentCountry"
+		}
+		data = levelfield : 1, title
+	}
+
+	home = TEXT
+	home {
+		typolink{
+			parameter.data = leveluid : 0
+			forceAbsoluteUrl = 1
+		}
+	}
+}
+
+[globalVar = TSFE:page|url_scheme = 2]
+basics.library.Links.home {
+	typolink{
+		forceAbsoluteUrl.scheme = https
+	}
+}
+[global]

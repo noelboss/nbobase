@@ -1,0 +1,17 @@
+library.Footer = COA                                                     
+library.Footer {   
+    wrap (
+		<div class="inner">
+			<ul>|</ul>
+		</div>
+	)
+	
+	10 < module.NavFooter
+	
+	20 = TEXT
+	20 {
+		data = date : U
+		strftime = %Y
+		wrap = <li>&copy;&#32;|&#32;{$library.Footer.copyright}</li>
+	} 
+}

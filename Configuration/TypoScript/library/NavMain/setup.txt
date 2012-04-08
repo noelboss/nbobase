@@ -1,0 +1,32 @@
+library.NavMain = HMENU
+library.NavMain {
+    entryLevel = 0
+    protectLVar = 1
+
+    # First level
+    1 = TMENU
+    1 {
+        expAll = 1
+
+        NO = 1
+        NO {
+			wrapItemAndSub.cObject = TEXT
+            wrapItemAndSub.cObject{
+				value = <li>|</li> |*| <li>|</li> |*|  <li class="last">|</li>
+            	insertData = 1
+			}
+			htmlSpecialChars = 1
+			htmlSpecialChars.preserveEntities = 1
+       }
+
+        ACT < .NO
+		ACT {
+			wrapItemAndSub.cObject{
+				value = <li class="active">|</li> |*| <li class="active">|</li> |*|  <li class="active last">|</li>
+            	insertData = 1
+			}
+		}
+
+        SPC = 0
+    }
+}

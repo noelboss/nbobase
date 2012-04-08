@@ -1,0 +1,4 @@
+library.Footer {
+	copyright = Kickstart
+}
+  

@@ -1,0 +1,18 @@
+######################
+# Permissions
+######################
+
+# Permissions von neu erstellten Seiten: User->Alles, Group->Alles, Everyone->Anschauen
+TCEMAIN.permissions {
+	# User can do anything (default):
+	user = show,edit,delete,new,editcontent
+	# Group can do anything (normally "delete" is disabled)
+	group = show,edit,delete,new,editcontent
+	# Everybody can at least see the page (normally everybody can do nothing)
+	everybody = 
+	# Owner be_users UID for new pages:
+	userid = 1
+	# Owner be_groups UID for new pages:
+	groupid = 1
+}
+                                                
