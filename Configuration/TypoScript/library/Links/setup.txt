@@ -1,0 +1,27 @@
+Library.Links {
+	Link = TEXT
+	Link {
+		typolink{
+			returnLast = url
+		}
+	}
+
+	Self < .link
+	Self.typolink.data = page:uid
+
+	Home = TEXT
+	Home {
+		typolink{
+			parameter.data = leveluid : 0
+			forceAbsoluteUrl = 1
+		}
+	}
+}
+
+[globalVar = TSFE:page|url_scheme = 2]
+Library.Links.Home {
+	typolink{
+		forceAbsoluteUrl.scheme = https
+	}
+}
+[global]

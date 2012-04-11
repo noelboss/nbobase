@@ -1,0 +1,144 @@
+root {
+    display: block;
+}
+
+body {
+	padding-bottom: 2em;
+}
+
+section {
+	padding-top: 60px;
+}
+
+.tab-well {
+	border-top: none;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	-webkit-box-shadow-top: 0;
+}
+
+.nav-tabs {
+	margin-bottom: 0;
+}
+
+.media,
+.colFlex {
+	overflow: hidden;
+}
+.colLeft {
+	float:left;
+}
+.colImage {
+	width: 170;
+	padding-right: 10px;
+}
+.wide,
+.richtext,
+textarea {
+	width: 98%;
+}
+
+.down {
+	padding-top: 4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+h3 i.icon {
+	vertical-align: 0;
+}
+
+h2, h1{
+	font-family: WindsongRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 5em;
+	margin-top: 0.25em;
+	line-height: 1;
+}
+.hero-unit h1{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+h2{
+	font-size: 3em;
+	margin-bottom:0em;
+}
+
+h5 {
+	font-size: 2em;
+	color: #4181B5;
+}
+
+.navbar .nav li a {
+	line-height: 3em;
+}
+
+h5,
+.navbar .brand {
+	font-family: JennaSueRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 3em;
+}
+
+h2 small, 
+h1 small{
+	font-family: QuicksandBook, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 0.25em;
+}
+
+h2 small{
+	display:block;
+	font-size: 0.4em;
+	margin-top: -0.5em;
+	margin-bottom: 1em;
+	letter-spacing: 0px;
+}
+
+.section {
+	margin-bottom: 1em;
+}
+
+a.noColor{
+	color: inherit;
+}
+.noColor:hover{
+	color: #444;
+	text-decoration: none;
+}
+
+.countGroup,
+.message-error {
+	display: none;
+}
+
+.gallery li {
+	height:200px;
+}
+
+.tx-sjwishlist .row,
+.tx-sjevents .row {
+	margin-bottom: 1em;
+}
+
+h1 .gifted,
+h2 .gifted {
+	margin-top: -0.2em;
+}
+
+.sliderControll {
+	margin-top: 7px;
+	width: 370px;
+}
+.sliderControll .minmax {
+	color: #999;
+	font-size: 0.8em;
+	margin-top: 0.25em;
+}
+.slider .progress {
+	height: 11px;
+	background: #aaa;
+}
+.ui-slider-handle {
+	cursor:pointer !important;
+	outline:none !important;
+}

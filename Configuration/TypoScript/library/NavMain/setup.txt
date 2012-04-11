@@ -7,6 +7,7 @@ library.NavMain {
     1 = TMENU
     1 {
         expAll = 1
+		noBlur = 1
 
         NO = 1
         NO {

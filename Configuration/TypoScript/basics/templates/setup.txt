@@ -1,0 +1,17 @@
+basics.templates < plugin.tx_fluidpage_pi1
+basics.templates {
+	settings {
+		partialRootPath = EXT:nbobase/Resources/Private/Templates/partials/
+		constants {
+			layout = 1
+		}
+	}
+	templates {
+		1 {
+			file = EXT:nbobase/Resources/Private/Templates/index.html
+		}
+		2{
+			file = EXT:nbobase/Resources/Private/Templates/content.html
+		}
+	}
+}

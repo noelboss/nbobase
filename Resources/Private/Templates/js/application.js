@@ -23,6 +23,54 @@
 			} 
 		});
 		
+			
+		// Slider
+		$('.slider').each(function(){
+			var $t = $(this);
+			var $input = $($t.data('target'));
+			var $b = $($t.data('bar'));
+			var $p = $b.parent();
+			
+			var p = $t.data('price'); // total price
+			var pc = p/100; // percent
+			var status = $t.data('status'); // total payed already
+			var share = ($t.data('share') || 0); // exisiting share
+			var step = $t.data('step'); // minimal steps
+			
+			var min = status-share || step; // minimal position
+			var v =  (share || step); // current position
+			var max = p-status-step;
+			
+			var options = {
+				min: step/pc, // 
+				max: ((p-status+share) / pc),
+				step: step/pc,
+				value: v/pc,
+				change: function(event, ui) {
+					var v = $t.slider('value');
+					updateBar(v);
+				}
+			};
+			
+			var updateBar = function(v){
+				$input.val((v*pc).toFixed(2));
+				var proz = v + (status-share)/pc;
+				$b.width(proz + "%");
+				console.log(proz*pc);
+				$p.removeClass('progress-danger').removeClass('progress-warning').removeClass('progress-success');
+				if(proz < 20){
+					$p.addClass('progress-danger');
+				} else if(proz < 70){
+					$p.addClass('progress-warning');
+				} 
+				if(proz > 99){
+					$p.addClass('progress-success');
+				}
+			}
+			updateBar(v/pc);
+			$t.slider(options);
+		});
+		
 		$('.error input:eq(0)').focus();
 
 		// Gallery

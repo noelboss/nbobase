@@ -5,8 +5,8 @@ library.Title {
 	10.value.insertData = 1
 }
 
-library.subTitle = COA
-library.subTitle {
+library.Title.Sub = COA
+library.Title.Sub {
 	10 = HTML
 	10.value = {page:subtitle}
 	10.value.insertData = 1

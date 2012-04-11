@@ -1,0 +1,5 @@
+library.Date.Year = TEXT
+library.Date.Year {
+  data = date : U
+  strftime = %Y
+}

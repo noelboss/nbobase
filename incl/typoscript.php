@@ -10,24 +10,31 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
 	// configuration
 	addTS($path.'basics/config/', 'Basic Configuration – required', $i, t3lib_extMgm::extPath($_EXTKEY));
+	
+	// languag setup
+	addTS($path.'basics/languages/', 'Language Configuration – recommended', $i, t3lib_extMgm::extPath($_EXTKEY));
+	
+	// templates
+	addTS($path.'basics/headerData/', 'basics.headerData', $i, t3lib_extMgm::extPath($_EXTKEY));
 
-	// link templates
-	addTS($path.'basics/library/Links/', 'basics.library.Links', $i, t3lib_extMgm::extPath($_EXTKEY));
-
-	// nav object
-	addTS($path.'basics/library/NavDefault/', 'basics.library.NavDefault', $i, t3lib_extMgm::extPath($_EXTKEY));
+	// js
+	addTS($path.'basics/js/', 'JS includes – required', $i, t3lib_extMgm::extPath($_EXTKEY));
+	
+	// css
+	addTS($path.'basics/css/', 'CSS includes – required', $i, t3lib_extMgm::extPath($_EXTKEY));
+	
+	// templates
+	addTS($path.'basics/templates/', 'Content Mapping – required', $i, t3lib_extMgm::extPath($_EXTKEY));
 
 	// page object, header, templavoila
 	addTS($path.'basics/page/', 'Page Object – required', $i, t3lib_extMgm::extPath($_EXTKEY));
-	// languag setup
-	addTS($path.'basics/languages/', 'Language Configuration', $i, t3lib_extMgm::extPath($_EXTKEY));
+
 
 	// modifications of existing typoscript
 	addTS($path.'modifications', 'modification', $i, t3lib_extMgm::extPath($_EXTKEY));
 
 	// extension configuration
 	addTS($path.'extensions', 'extension', $i, t3lib_extMgm::extPath($_EXTKEY));
-
 
 	// integration templates from terrific
 	addTS(t3lib_extMgm::extPath($_EXTKEY).'Resources/Private/Templates/modules/*/', 'module', $i, t3lib_extMgm::extPath($_EXTKEY));
@@ -40,7 +47,7 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
 
 	// performance optimization
-	addTS($path.'basics/performance/', 'Performance Settings – required', $i, t3lib_extMgm::extPath($_EXTKEY));
+	addTS($path.'basics/performance/', 'Performance Settings – recommended', $i, t3lib_extMgm::extPath($_EXTKEY));
 
 
 	// recursively add TS

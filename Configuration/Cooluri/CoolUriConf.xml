@@ -2,47 +2,22 @@
 <cooluri>
 	<cache>
 		<usecache>1</usecache>
-		<!-- READONLY -->
 		<params2cool>
-			<!-- how often (in days) should be links updated (Typo3 cache needs to be cleared) -->
 			<checkforchangeevery>0.1</checkforchangeevery>
 		</params2cool>
+		<cacheparams>0</cacheparams>
 		<cool2params>
-			<!-- how many days should old links (those that are redirected to existing) should be kept active -->
 			<oldlinksvalidfor>365</oldlinksvalidfor>
 		</cool2params>
 		<pagenotfound>
-			<!-- the status has to meet HTTP protocol header -->
 			<status>HTTP/1.0 404 Not Found</status>
 			<behavior type="userfunc">tx_cooluri-&gt;pageNotFound</behavior>
-			<!--behavior type="message"><![CDATA[ <h1>Page not found!</h1> ]]></behavior-->
-			<!-- possible @type values: 
-        page - will show a file (loaded using file_get_contents)
-        redirect - will redirect to a certaing URL
-        message - will output a message
-        userfunc - user function is called, there's a default implementation of standard TYPO3 404 handling
-        <behavior type="userfunc">tx_cooluri->pageNotFound</behavior>
-      -->
 		</pagenotfound>
 	</cache>
-	<!-- bind a domain with a language
-    @key - language id - L parameter value
-    value - domain name
-  -->
-	<!--
-  <domainlanguages>
-    <domain lang="0">www.example.com</domain>
-    <domain lang="1">www.example.cz</domain>
-    <domain lang="2">www.example.de</domain>
-  </domainlanguages>
-  -->
 	<pagepath>
-		<!-- first non-empty value will be used -->
-		<title>tx_realurl_pathsegment,title,alias,subtitle</title>
+		<title>alias,tx_realurl_pathsegment,title</title>
 		<saveto>id</saveto>
-		<!-- READONLY -->
 		<default>0</default>
-		<!-- READONLY -->
 		<userfunc>tx_cooluri-&gt;getPageTitle</userfunc>
 		<t3conv>1</t3conv>
 	</pagepath>
@@ -109,10 +84,6 @@
 		<part>
 			<parameter>tx_sjwishlist_whishlist[newPerson]</parameter>
 		</part>
-		<part>
-			<parameter>tx_sjwishlist_whishlist[e]</parameter>
-		</part>
-		
 	</uriparts>
 	<predefinedparts>
 		<part>
@@ -141,25 +112,23 @@
 			<value key="anmeldung">Reservation</value>
 		</valuemap>
 		<valuemap>
+			<parameter>tx_sjevents_events[action]</parameter>
+			<value key="">show</value>
+			<value key="">list</value>
+			<value key="neu">new</value>
+			<value key="bearbeiten">edit</value>
+			<value key="loeschen">delete</value>
+		</valuemap>
+		<valuemap>
 			<parameter>tx_sjwishlist_whishlist[controller]</parameter>
 			<value key="">Wish</value>
-			<value key="teilnehmen">Participation</value>
+			<value key="schenken">Participation</value>
 		</valuemap>
 		<valuemap>
 			<parameter>tx_sjwishlist_whishlist[action]</parameter>
 			<value key="">show</value>
 			<value key="">list</value>
 			<value key="neu">new</value>
-			<value key="erstellen">create</value>
-			<value key="bearbeiten">edit</value>
-			<value key="loeschen">delete</value>
-		</valuemap>
-		<valuemap>
-			<parameter>tx_sjevents_events[action]</parameter>
-			<value key="">show</value>
-			<value key="">list</value>
-			<value key="neu">new</value>
-			<value key="erstellen">create</value>
 			<value key="bearbeiten">edit</value>
 			<value key="loeschen">delete</value>
 		</valuemap>
@@ -168,11 +137,18 @@
 			<value key="fehler">1</value>
 		</valuemap>
 	</valuemaps>
-	<!-- this will put L param to the first position
-      for more magic see manual -->
+
+
 	<paramorder>
 		<param>L</param>
 	</paramorder>
-	<!-- READONLY START -->
+	
+	<!--partorder>
+        <part>pagepath</part>
+        <part>uriparts</part>
+        <part>predefinedparts</part>
+        <part>valuemaps</part>
+    </partorder-->
+
 	<cooluris>1</cooluris>
 </cooluri>

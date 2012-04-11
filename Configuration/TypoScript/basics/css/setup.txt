@@ -1,0 +1,17 @@
+basics.css = PAGE
+basics.css{
+	includeCSS {
+		fonts = 		EXT:nbobase/Resources/Public/fonts/fonts.css
+		bootstrap = 	EXT:nbobase/Resources/Public/plugins/bootstrap/bootstrap.css
+		
+		fancybox = 		EXT:nbobase/Resources/Public/plugins/fancybox/jquery.fancybox.css
+		fancybox2 = 	EXT:nbobase/Resources/Public/plugins/fancybox/jquery.fancybox-thumbs.css
+		
+		slider = 		EXT:nbobase/Resources/Public/plugins/nivo-slider/nivo-slider.css
+		sliderTheme = 	EXT:nbobase/Resources/Public/plugins/nivo-slider/default.css
+		
+		ui = 			EXT:nbobase/Resources/Public/plugins/jquery-ui/jquery-ui-1.8.18.custom.css
+		
+		application = 	EXT:nbobase/Resources/Public/css/application.css
+	}
+}
