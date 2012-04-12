@@ -1,4 +1,4 @@
-library.Logo < basics.library.Links.home
+library.Logo < library.Links.Home
 library.Logo {
 	#value = Sagen Ja
 	typolink {

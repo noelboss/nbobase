@@ -1,4 +1,4 @@
-Library.Links {
+library.Links {
 	Link = TEXT
 	Link {
 		typolink{

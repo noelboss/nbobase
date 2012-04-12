@@ -9,33 +9,8 @@ body {
 section {
 	padding-top: 60px;
 }
-
-.tab-well {
-	border-top: none;
-	border-top-right-radius: 0;
-	border-top-left-radius: 0;
-	-webkit-box-shadow-top: 0;
-}
-
-.nav-tabs {
-	margin-bottom: 0;
-}
-
-.media,
-.colFlex {
-	overflow: hidden;
-}
-.colLeft {
-	float:left;
-}
-.colImage {
-	width: 170;
-	padding-right: 10px;
-}
-.wide,
-.richtext,
-textarea {
-	width: 98%;
+.section {
+	margin-bottom: 1em;
 }
 
 .down {
@@ -92,53 +67,4 @@ h2 small{
 	margin-top: -0.5em;
 	margin-bottom: 1em;
 	letter-spacing: 0px;
-}
-
-.section {
-	margin-bottom: 1em;
-}
-
-a.noColor{
-	color: inherit;
-}
-.noColor:hover{
-	color: #444;
-	text-decoration: none;
-}
-
-.countGroup,
-.message-error {
-	display: none;
-}
-
-.gallery li {
-	height:200px;
-}
-
-.tx-sjwishlist .row,
-.tx-sjevents .row {
-	margin-bottom: 1em;
-}
-
-h1 .gifted,
-h2 .gifted {
-	margin-top: -0.2em;
-}
-
-.sliderControll {
-	margin-top: 7px;
-	width: 370px;
-}
-.sliderControll .minmax {
-	color: #999;
-	font-size: 0.8em;
-	margin-top: 0.25em;
-}
-.slider .progress {
-	height: 11px;
-	background: #aaa;
-}
-.ui-slider-handle {
-	cursor:pointer !important;
-	outline:none !important;
 }

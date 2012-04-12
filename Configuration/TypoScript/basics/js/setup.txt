@@ -3,35 +3,29 @@ basics.js {
 	headerData {
 		10 = TEXT
 		10.value (
-			<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
 			<!--[if lt IE 9]>
 				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			<![endif]-->
 		)
 	}
 
-	jsFooterInline.10 = TEXT
-	jsFooterInline.10.value (
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-28648498-1']);
-		_gaq.push(['_setDomainName', 'github.com']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	)
+	#jsFooterInline.10 = TEXT
+	#jsFooterInline.10.value (
+	#	var _gaq = _gaq || [];
+	#	_gaq.push(['_setAccount', 'UA-28648498-1']);
+	#	_gaq.push(['_setDomainName', 'github.com']);
+	#	_gaq.push(['_trackPageview']);
+    #
+	#	(function() {
+	#	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	#	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	#	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	#	})();
+	#)
 	
 	includeJSFooter {
-		jq = 				EXT:nbobase/Resources/Private/Templates/js/jquery-1.7.1.min.js
-		ui = 				EXT:nbobase/Resources/Private/Templates/js/jquery-ui-1.8.18.custom.min.js
-		fancybox = 			EXT:nbobase/Resources/Private/Templates/js/jquery.fancybox.pack.js
-		fancybox2 = 		EXT:nbobase/Resources/Private/Templates/js/jquery.fancybox-thumbs.js
-		nice = 				EXT:nbobase/Resources/Private/Templates/js/nicEdit-latest.js
-		bootstrap = 		EXT:nbobase/Resources/Private/Templates/js/bootstrap.js
-		slider = 			EXT:nbobase/Resources/Private/Templates/js/jquery.nivo.slider.pack.js
-		application = 		EXT:nbobase/Resources/Private/Templates/js/application.js
+		jq171 = 			EXT:nbobase/Resources/Public/js/jquery-1.7.1.min.js
+		fancybox = 			EXT:nbobase/Resources/Public/js/jquery.fancybox.pack.js
+		nbobase = 			EXT:nbobase/Resources/Public/js/application.js
 	}
 }

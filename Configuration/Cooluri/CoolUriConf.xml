@@ -30,59 +30,59 @@
 			</lookindb>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[event]</parameter>
+			<parameter>tx_nboevents_events[event]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_sjevents_domain_model_event WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[controller]</parameter>
+			<parameter>tx_nboevents_events[controller]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[action]</parameter>
+			<parameter>tx_nboevents_events[action]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[location]</parameter>
+			<parameter>tx_nboevents_events[location]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_sjevents_domain_model_location WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[newReservation]</parameter>
+			<parameter>tx_nboevents_events[newReservation]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[reservation]</parameter>
+			<parameter>tx_nboevents_events[reservation]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[newPerson]</parameter>
+			<parameter>tx_nboevents_events[newPerson]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjevents_events[e]</parameter>
+			<parameter>tx_nboevents_events[e]</parameter>
 		</part>
 		
 		<part>
-			<parameter>tx_sjwishlist_whishlist[wish]</parameter>
+			<parameter>tx_nbowishlist_whishlist[wish]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_sjwishlist_domain_model_wish WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nbowishlist_domain_model_wish WHERE uid=$1</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
-			<parameter>tx_sjwishlist_whishlist[controller]</parameter>
+			<parameter>tx_nbowishlist_whishlist[controller]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjwishlist_whishlist[action]</parameter>
+			<parameter>tx_nbowishlist_whishlist[action]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjwishlist_whishlist[newParticipation]</parameter>
+			<parameter>tx_nbowishlist_whishlist[newParticipation]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjwishlist_whishlist[participation]</parameter>
+			<parameter>tx_nbowishlist_whishlist[participation]</parameter>
 		</part>
 		<part>
-			<parameter>tx_sjwishlist_whishlist[newPerson]</parameter>
+			<parameter>tx_nbowishlist_whishlist[newPerson]</parameter>
 		</part>
 	</uriparts>
 	<predefinedparts>
@@ -106,13 +106,13 @@
 			<value key="en">1</value>
 		</valuemap>
 		<valuemap>
-			<parameter>tx_sjevents_events[controller]</parameter>
+			<parameter>tx_nboevents_events[controller]</parameter>
 			<value key="">Event</value>
 			<value key="">Location</value>
 			<value key="anmeldung">Reservation</value>
 		</valuemap>
 		<valuemap>
-			<parameter>tx_sjevents_events[action]</parameter>
+			<parameter>tx_nboevents_events[action]</parameter>
 			<value key="">show</value>
 			<value key="">list</value>
 			<value key="neu">new</value>
@@ -120,12 +120,12 @@
 			<value key="loeschen">delete</value>
 		</valuemap>
 		<valuemap>
-			<parameter>tx_sjwishlist_whishlist[controller]</parameter>
+			<parameter>tx_nbowishlist_whishlist[controller]</parameter>
 			<value key="">Wish</value>
 			<value key="schenken">Participation</value>
 		</valuemap>
 		<valuemap>
-			<parameter>tx_sjwishlist_whishlist[action]</parameter>
+			<parameter>tx_nbowishlist_whishlist[action]</parameter>
 			<value key="">show</value>
 			<value key="">list</value>
 			<value key="neu">new</value>
@@ -133,7 +133,7 @@
 			<value key="loeschen">delete</value>
 		</valuemap>
 		<valuemap>
-			<parameter>tx_sjevents_events[e][reskey]</parameter>
+			<parameter>tx_nboevents_events[e][reskey]</parameter>
 			<value key="fehler">1</value>
 		</valuemap>
 	</valuemaps>
