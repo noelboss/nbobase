@@ -107,7 +107,7 @@ h5 {
 	line-height: 3em;
 }
 
-h5,
+.hero-unit h2,
 .navbar .brand {
 	font-family: JennaSueRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 3em;
