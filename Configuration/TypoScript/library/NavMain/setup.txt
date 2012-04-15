@@ -1,6 +1,6 @@
 library.NavMain = HMENU
 library.NavMain {
-    entryLevel = 1
+    entryLevel = 2
     protectLVar = 1
 
     # First level
