@@ -63,12 +63,12 @@ RTE.default {
         
 		entryHTMLparser_db = 1
        	entryHTMLparser_db {
-			allowTags = p,b,i,strong,em,h2,h3,h4,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li 
+			allowTags = p,b,i,strong,em,h2,h3,h4,h5,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li 
 		}   
 		
 		exitHTMLparser_db = 1
 		exitHTMLparser_db {
-			allowTags = p,b,i,strong,em,h2,h3,h4,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li 
+			allowTags = p,b,i,strong,em,h2,h3,h4,h5,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li 
 			tags {
 				b.remap = strong
 				i.remap = em
@@ -77,7 +77,7 @@ RTE.default {
 		
 		exitHTMLparser_rte = 1
 		exitHTMLparser_rte {
-			allowTags = p,b,i,strong,em,h2,h3,h4,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li
+			allowTags = p,b,i,strong,em,h2,h3,h4,h5,span,div,a,br,table, thead, tbody, tr, th, td,ul,ol,li
 			tags {
 				strong.remap = b
 				em.remap = i

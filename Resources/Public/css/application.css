@@ -36,6 +36,13 @@ p {
 	background: url('../img/background.png') repeat;
 	padding: 40px 40px 40px;
 }
+.hero-unit .inner a{
+	color: #8FC9F3;
+}
+.hero-unit .inner a:hover{
+	color: #BDE9FB;
+}
+
 .noVisual {
 	padding: 0;
 }
