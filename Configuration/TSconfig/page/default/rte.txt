@@ -54,12 +54,12 @@ RTE.default {
                    
 	removeTagsAndContents = link, meta, script, style, title
 		
-	hidePStyleItems = H1, H5,H6, PRE, Address, DIV, BLOCKQUOTE
+	hidePStyleItems = H1, H6,PRE, Address, DIV, BLOCKQUOTE,article,footer,nav,header,aside
 	     	
 	proc {
         overrideMode = ts_css
         allowedClasses = advantage,linklist,download,button
-       	denyTags = u,img,center,font,hr,sub,sup,strike,h1,h5,h6,pre,blockquote,caption
+       	denyTags = u,img,center,font,hr,sub,sup,strike,h1,pre,blockquote,caption
         
 		entryHTMLparser_db = 1
        	entryHTMLparser_db {
@@ -103,7 +103,7 @@ RTE.default {
 	hideButtons >
 	showButtons (    
 		undo, redo, copy, cut, paste, bar, findreplace, removeformat, bar, chMode, linebreak,         
-		formatblock, blockstyle, bar, bold, italic, bar, orderedlist, unorderedlist, bar, link, bar, 
+		formatblock, bar, bold, italic, bar, orderedlist, unorderedlist, bar, link, bar, 
 		linebreak, table, bar, toggleborders, bar, tableproperties, bar,
 		rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, bar,
 		columninsertbefore, columninsertafter, columndelete, columnsplit, bar, 
@@ -111,7 +111,7 @@ RTE.default {
 	) 
 	toolbarOrder (         
 		undo, redo, copy, cut, paste, bar, findreplace, removeformat, bar, chMode, linebreak,         
-		formatblock, blockstyle, bar, bold, italic, bar,  orderedlist, unorderedlist, bar, link, bar, 
+		formatblock, bar, bold, italic, bar,  orderedlist, unorderedlist, bar, link, bar, 
 		linebreak, table, bar, toggleborders, bar, tableproperties, bar,
 		rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, bar,
 		columninsertbefore, columninsertafter, columndelete, columnsplit, bar, 
