@@ -4,7 +4,7 @@ basics.headerData.title {
 
 	# Startpage
 	10 = TEXT
-	10.data = leveltitle : 0
+	10.data = leveltitle : 1
 
 	# Subpage
 	20 = TEXT
