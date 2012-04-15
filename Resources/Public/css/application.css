@@ -8,7 +8,10 @@ body {
 
 body,
 p {
+<<<<<<< HEAD
 	padding-bottom: 2em;
+=======
+>>>>>>> Adjusted Font-size, removed unused stuff
 	color: #373737;
     font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
