@@ -1,0 +1,13 @@
+
+styles.content.imgtext {
+	colSpace = 20
+	rowSpace = 20
+	textMargin = 20
+    
+	maxW = 940
+	maxWInText = 470
+    
+	linkWrap.lightboxEnabled = 1
+	linkWrap.lightboxCssClass = fancybox
+	linkWrap.width = 800
+}

@@ -4447,7 +4447,7 @@ a.thumbnail:hover {
     height: auto !important;
     overflow: visible !important;
   }
-}
+}/*
 @media (min-width: 1200px) {
   .row {
     margin-left: -30px;
@@ -4645,3 +4645,4 @@ a.thumbnail:hover {
     margin-left: 30px;
   }
 }
+*/

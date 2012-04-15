@@ -1,12 +1,32 @@
 # Setup
 library.Visual = COA
 library.Visual {    
-	wrap = background-image: url(/|);
 	10 = IMG_RESOURCE  
-	10.file {    
-		import.data = levelmedia: -1, "slide"
-		import = uploads/media/
-		import.override.field = media
-		import.listNum = 0       
+	10 {
+		file = EXT:nbobase/Resources/Public/img/header.jpg
+		file {}
+			import = uploads/media/
+			import {  
+				data = levelmedia: -1, "slide"
+				override.field = media
+				# Add a specific Image
+				# listNum = 0 
+				listNum = rand
+				# just when field media is present...
+				override.field = media
+			}
+			width = 1020
+		}
 	}
+	stdWrap.if.isTrue.data = levelmedia: -1, "slide"
+	wrap  = style="background-image: url(/|);"
 }
+
+library.VisualNo = TEXT
+library.VisualNo {    
+	value = noVisual
+	if.isFalse.data = levelmedia: -1, "slide"
+}
+
+library.VisualContant < library.Visual
+library.VisualContant.stdWrap.outerWrap = <div class="contentHeader" |></div>

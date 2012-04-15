@@ -1,18 +1,9 @@
 <!-- ###LAYOUT### -->
-<div class="container">
+<div class="container containerOuter">
 	<f:render partial="navbar" />
+	<f:cObject typoscriptObjectPath="library.VisualContant" />
 	<section>
-	<div class="container">
-		<section id="install">
-			<div class="row">
-				<div class="span12">
-					<f:cObject typoscriptObjectPath="library.Content.c0" />
-				</div>
-			</div>
-		</section>
-	</div>
+		<f:render partial="content" />
 	</section>
-	<hr>
-	<f:render partial="Footer" />
-</div> <!-- /container -->
+</div>
 <!-- ###LAYOUT### -->

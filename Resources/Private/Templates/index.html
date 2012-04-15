@@ -1,23 +1,14 @@
 <!-- ###LAYOUT### -->
-<div class="container">
+<div class="container containerOuter">
 	<f:render partial="navbar" />
-
-	<div class="hero-unit">
-		<h1>
-			<f:cObject typoscriptObjectPath="library.Title.Sub" />
-		</h1>
-		<f:cObject typoscriptObjectPath="library.Content.c1" />
+	<div class="hero-unit <f:cObject typoscriptObjectPath='library.VisualNo'/>" <f:cObject typoscriptObjectPath="library.Visual"/>>
+		<div class="inner">
+			<h1>
+				<f:cObject typoscriptObjectPath="library.Title.Sub" />
+			</h1>
+			<f:cObject typoscriptObjectPath="library.Content.c1" />
+		</div>
 	</div>
-	<div class="container">
-		<section>
-			<div class="row">
-				<div class="span12">
-					<f:cObject typoscriptObjectPath="library.Content.c0" />
-				</div>
-			</div>
-		</section>
-	</div>
-	<hr>
-	<f:render partial="Footer" />
-</div> <!-- /container -->
+	<f:render partial="content" />
+</div>
 <!-- ###LAYOUT### -->

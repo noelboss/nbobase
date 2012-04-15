@@ -3,7 +3,8 @@ root {
 }
 
 body {
-	padding-bottom: 2em;
+	background: #fff;
+	border-top: 1px solid #000;
 }
 
 body,
@@ -18,8 +19,46 @@ p {
 	margin-bottom: 1.5em;
 }
 
-section {
-	padding-top: 60px;
+
+
+.contentHeader,
+.hero-unit  {
+	padding-top: 0;
+	margin-top: 0;
+	background-position: 50% 30%;
+	background-repeat: no-repeat;
+	background-color: #ddd;
+	color: #fff;
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+    filter: dropshadow(color=#000000, offx=0, offy=0);
+}
+.hero-unit .inner {
+	background: url('../img/background.png') repeat;
+	padding: 40px 40px 40px;
+}
+.noVisual {
+	padding: 0;
+}
+
+.contentHeader {
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.containerWrapper {
+	background: #fff;
+}
+
+.hero-unit .inner,
+.contentHeader,
+.containerWrapper,
+.csc-textpic-image img {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.csc-textpic-imagewrap {
+	margin-right: 20px;
 }
 .section {
 	margin-bottom: 1em;
@@ -79,4 +118,31 @@ h2 small{
 	margin-top: -0.5em;
 	margin-bottom: 1em;
 	letter-spacing: 0px;
+}
+
+@media (min-width: 979px) {
+	body {
+		background: #eee;
+	}
+	.containerOuter {
+		padding-top: 60px;
+		width: 980px;
+	}
+	.containerWrapper {
+		width: 940px;
+		padding: 20px;
+	}
+}
+
+@media (min-width: 1070px) {
+	.contentHeader {
+		height: 350px;
+		margin-bottom: 40px;
+	}
+	.containerOuter {
+		width: 1020px;
+	}
+	.containerWrapper {
+		padding: 40px;
+	}
 }

@@ -1,11 +1,4 @@
 
-styles.content.imgtext.maxW = 1170
-styles.content.loginform.pid = 0
-styles.content.imgtext.maxWInText = 0
-styles.content.imgtext.linkWrap.lightboxEnabled = 1
-styles.content.imgtext.linkWrap.lightboxCssClass = fancybox
-styles.content.imgtext.linkWrap.width = 800
-
 ###############################################
 # Allgemeine Konfiguration
 ###############################################
@@ -65,5 +58,5 @@ config {
 	#// Removes default Title. Is set in headerdara/setup.txt
 	noPageTitle = 1
 
-	admPanel = 1
+	admPanel = 0
 }
