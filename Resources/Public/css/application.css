@@ -48,8 +48,7 @@ p {
 }
 
 .contentHeader {
-	height: 300px;
-	margin-bottom: 20px;
+	display: none;
 }
 
 .containerWrapper {
@@ -132,10 +131,18 @@ h2 small{
 	margin-bottom: 1em;
 	letter-spacing: 0px;
 }
+footer p {
+	color: #999;
+	font-size: 0.8em;
+}
 
-@media (min-width: 979px) {
+@media (min-width: 979px) {	
 	body {
 		background: #eee;
+	}
+	.contentHeader {
+		height: 250px;
+		margin-bottom: 20px;
 	}
 	.containerOuter {
 		padding-top: 60px;
