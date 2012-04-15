@@ -67,6 +67,12 @@ p {
 .csc-textpic-imagewrap {
 	margin-right: 20px;
 }
+
+div.csc-mailform ol, 
+div.csc-mailform ol li {
+	list-style-type: none;
+}
+
 .section {
 	margin-bottom: 1em;
 }
