@@ -83,7 +83,7 @@ mod.web_layout {
 
 mod.web_list {	   
 	hideTables = tt_content
-	listOnlyInSingleTableView = 1
+	listOnlyInSingleTableView = 0
 	clickTitleMode = edit
  	alternateBgColors = 1
 	#allowedNewTables = pages, be_groups, be_users, sys_filemounts, sys_language, sys_domain, sys_workspace, sys_template
