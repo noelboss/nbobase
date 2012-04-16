@@ -1,6 +1,6 @@
-<!-- ###LAYOUT### -->
-<div class="container containerOuter">
-	<f:render partial="navbar" />
+<f:layout name="Default" />
+
+<f:section name="Body">
 	<div class="hero-unit <f:cObject typoscriptObjectPath='library.VisualNo'/>" <f:cObject typoscriptObjectPath="library.Visual"/>>
 		<div class="inner">
 			<h1>
@@ -9,6 +9,5 @@
 			<f:cObject typoscriptObjectPath="library.Content.c1" />
 		</div>
 	</div>
-	<f:render partial="content" />
-</div>
-<!-- ###LAYOUT### -->
+	<f:render partial="Content" />
+</f:section>

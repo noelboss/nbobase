@@ -1,17 +1,29 @@
-basics.templates < plugin.tx_fluidpage_pi1
-basics.templates {
-	settings {
-		partialRootPath = EXT:nbobase/Resources/Private/Templates/partials/
-		constants {
-			layout = 1
-		}
+# Assign the Template files with the Fluid Backend-Template
+basics.templates = FLUIDTEMPLATE
+basics.templates{
+	# Create a Fluid Template
+	# Set the Template Pathes
+	partialRootPath = EXT:nbobase/Resources/Private/Templates/partials/
+	layoutRootPath = EXT:nbobase/Resources/Private/Templates/layouts/
+	variables {
+		
 	}
-	templates {
-		1 {
-			file = EXT:nbobase/Resources/Private/Templates/index.html
-		}
-		2{
-			file = EXT:nbobase/Resources/Private/Templates/content.html
-		}
+	
+	file.stdWrap.cObject = CASE
+	file.stdWrap.cObject {
+		key.data = levelfield:-1, backend_layout_next_level, slide
+		key.override.field = backend_layout
+		
+		# Set the default Template, our 3 column Template
+		default = TEXT
+		default.value = EXT:nbobase/Resources/Private/Templates/content.html
+		
+		# Set a second [3] Template, our full size Template
+		1 = TEXT
+		1.value = EXT:nbobase/Resources/Private/Templates/index.html
+		
+		# Set also the first [2] Template, our 3 column Template
+		2 = TEXT
+		2.value = EXT:nbobase/Resources/Private/Templates/content.html
 	}
 }

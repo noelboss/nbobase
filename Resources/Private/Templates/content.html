@@ -1,9 +1,8 @@
-<!-- ###LAYOUT### -->
-<div class="container containerOuter">
-	<f:render partial="navbar" />
+<f:layout name="Default" />
+
+<f:section name="Body">
 	<f:cObject typoscriptObjectPath="library.VisualContant" />
 	<section>
 		<f:render partial="content" />
 	</section>
-</div>
-<!-- ###LAYOUT### -->
+</f:section>
