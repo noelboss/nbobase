@@ -12,7 +12,7 @@ library.Links {
 	Home = TEXT
 	Home {
 		typolink{
-			parameter.data = leveluid : 1
+			parameter.data = leveluid : {$nbobase.entryLevel.0}
 			forceAbsoluteUrl = 1
 		}
 	}

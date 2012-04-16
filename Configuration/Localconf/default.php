@@ -129,7 +129,7 @@
 	$TYPO3_CONF_VARS['EXT']['extConf']['em'] = 'a:1:{s:17:"selectedLanguages";s:2:"de";}';	//  Modified or inserted by TYPO3 Extension Manager.
 	$TYPO3_CONF_VARS['EXT']['extConf']['dce'] = 'a:2:{s:7:"DEVMODE";s:1:"1";s:16:"ENABLECODEMIRROR";s:1:"1";}';	// Modified or inserted by TYPO3 Extension Manager. 
 	$TYPO3_CONF_VARS['EXT']['extConf']['extension_builder'] = 'a:3:{s:15:"enableRoundtrip";s:1:"1";s:15:"backupExtension";s:1:"1";s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";}';	//  Modified or inserted by TYPO3 Extension Manager.
-	$TYPO3_CONF_VARS['EXT']['extConf']['cooluri'] = 'a:3:{s:6:"LANGID";s:1:"L";s:7:"XMLPATH";s:44:"typo3conf/ext/nbobase/Configuration/Cooluri/";s:11:"MULTIDOMAIN";s:1:"0";}';	// Modified or inserted by TYPO3 Extension Manager. 
+	$TYPO3_CONF_VARS['EXT']['extConf']['cooluri'] = 'a:3:{s:6:"LANGID";s:1:"L";s:7:"XMLPATH";s:44:"typo3conf/ext/nbobase/Configuration/Cooluri/";s:11:"MULTIDOMAIN";s:1:"1";}';	//  Modified or inserted by TYPO3 Extension Manager.
 	$TYPO3_CONF_VARS['EXT']['extConf']['rsaauth'] = 'a:1:{s:18:"temporaryDirectory";s:18:"/home/mondialw/tmp";}';	// Modified or inserted by TYPO3 Extension Manager. 
 	$TYPO3_CONF_VARS['EXT']['extConf']['saltedpasswords'] = 'a:2:{s:3:"FE.";a:2:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:28:"tx_saltedpasswords_salts_md5";}s:3:"BE.";a:2:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:28:"tx_saltedpasswords_salts_md5";}}';	//  Modified or inserted by TYPO3 Extension Manager.	
 ?>

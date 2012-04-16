@@ -1,3 +1,5 @@
+# Define the Levels of your Website
+nbobase.entryLevel.0 = 1
 
 styles.content.imgtext {
 	colSpace = 20
