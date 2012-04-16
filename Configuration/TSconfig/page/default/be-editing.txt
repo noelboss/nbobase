@@ -72,6 +72,34 @@ mod.web_layout {
 	disableIconToolbar = 1
 	disableAdvanced = 1
 	hideTables = static_template, static_countries, static_country_zones, static_currencies, static_languages,static_territories,static_taxes,static_markets
+	menu.function {
+		0=0
+		1=1
+		2=0
+		3=0
+	}
+}
+
+
+mod.web_list {	   
+	hideTables = tt_content
+	listOnlyInSingleTableView = 1
+	clickTitleMode = edit
+ 	alternateBgColors = 1
+	#allowedNewTables = pages, be_groups, be_users, sys_filemounts, sys_language, sys_domain, sys_workspace, sys_template
+}
+
+# Adding fce to wizard tabs
+templavoila.wizards {
+	newContentElement {
+		renderMode = tabs   
+		wizardItems{
+			fce {               
+				header = LLL:EXT:nxbase/Resources/Private/Language/system.xml:wizardItems.fce.tab
+				show = *
+			}                            
+		}  
+	}
 }
 
 mod.web_txtemplavoilaM1{
@@ -86,26 +114,6 @@ mod.web_txtemplavoilaM1{
 mod.web_txtemplavoilaM2 {
 	disableErrorMessages = 1
 }
-
-mod.web_list {	   
-	hideTables = tt_content
-	listOnlyInSingleTableView = 0
-	clickTitleMode = edit	  
-	#allowedNewTables = pages, be_groups, be_users, sys_filemounts, sys_language, sys_domain, sys_workspace, sys_template
-}	   
-
-# Adding fce to wizard tabs
-templavoila.wizards {
-	newContentElement {
-		renderMode = tabs   
-		wizardItems{
-			fce {               
-				header = LLL:EXT:nxbase/Resources/Private/Language/system.xml:wizardItems.fce.tab
-				show = *
-			}                            
-		}  
-	}
-}    
 
 #Page-TSConfig
 mod.wizards.newContentElement.wizardItems.special.elements.fce {
