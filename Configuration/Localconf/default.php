@@ -114,7 +114,8 @@
 
 	// Disable Backend Donate Window
 	$TYPO3_CONF_VARS['BE']['allowDonateWindow'] = '0';
-	$TYPO3_CONF_VARS['BE']['interfaces'] = 'backend,frontend';
+	//$TYPO3_CONF_VARS['BE']['interfaces'] = 'backend,frontend';
+	$TYPO3_CONF_VARS['BE']['interfaces'] = 'backend';
 	// Modyfie Backend layout to display checkboxes in Access-Lists (BE-Usergroup Config)
 	// $TYPO3_CONF_VARS['BE']['accessListRenderMode'] = 'checkbox';
 	
