@@ -32,6 +32,7 @@ p {
 	text-shadow: 0px 0px 5px rgba(0,0,0,0.75);
     filter: dropshadow(color=#000000, offx=0, offy=0);
 }
+
 .hero-unit .inner {
 	background: url('../img/background.png') repeat;
 	padding: 40px 40px 40px;
@@ -141,7 +142,8 @@ footer p {
 		background: #eee;
 	}
 	.contentHeader {
-		height: 250px;
+		display: block;
+		height: 220px;
 		margin-bottom: 20px;
 	}
 	.containerOuter {
@@ -156,7 +158,6 @@ footer p {
 
 @media (min-width: 1070px) {
 	.contentHeader {
-		height: 350px;
 		margin-bottom: 40px;
 	}
 	.containerOuter {
@@ -164,5 +165,11 @@ footer p {
 	}
 	.containerWrapper {
 		padding: 40px;
+	}
+}
+
+@media (min-width: 1070px) and (min-height: 890px) {
+	.contentHeader {
+		height: 300px;
 	}
 }

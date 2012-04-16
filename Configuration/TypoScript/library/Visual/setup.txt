@@ -15,7 +15,7 @@ library.Visual {
 				# just when field media is present...
 				override.field = media
 			}
-			width = 1020
+			width = 1020c
 		}
 	}
 	stdWrap.if.isTrue.data = levelmedia: -1, "slide"
@@ -30,3 +30,4 @@ library.VisualNo {
 
 library.VisualContant < library.Visual
 library.VisualContant.stdWrap.outerWrap = <div class="contentHeader" |></div>
+library.VisualContant.10.file.height = 300c
