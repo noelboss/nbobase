@@ -90,46 +90,6 @@ mod.web_list {
 	#allowedNewTables = pages, be_groups, be_users, sys_filemounts, sys_language, sys_domain, sys_workspace, sys_template
 }
 
-# Adding fce to wizard tabs
-templavoila.wizards {
-	newContentElement {
-		renderMode = tabs   
-		wizardItems{
-			fce {               
-				header = LLL:EXT:nxbase/Resources/Private/Language/system.xml:wizardItems.fce.tab
-				show = *
-			}                            
-		}  
-	}
-}
-
-mod.web_txtemplavoilaM1{
-	#blindIcons = new,edit,copy,cut,ref,paste,pasteAfter,pasteSubRef,browse,delete,makeLocal,unlink,hide
-	blindIcons = browse
-	enableDeleteIconForLocalElements = 2  
-	enableEditIconForRefElements = 1 
-	disableDisplayMode = selectedLanguage
-	showTabsIfEmpty = 0
-}
-          
-mod.web_txtemplavoilaM2 {
-	disableErrorMessages = 1
-}
-
-#Page-TSConfig
-mod.wizards.newContentElement.wizardItems.special.elements.fce {
-	icon = gfx/c_wiz/div.gif
-	title = Flexible Content Element
-	description = Specially developed Content Element
-	tt_content_defValues {
-		CType = templavoila_pi1
-		tx_templavoila_to = 3
-		tx_templavoila_ds = 3
-	}
-}
- 
-mod.wizards.newContentElement.wizardItems.special.show := addToList(fce)                      
-
 TCEMAIN{
 	default {
 	  disablePrependAtCopy = 1
