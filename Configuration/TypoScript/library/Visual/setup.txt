@@ -3,8 +3,8 @@ library.Visual = COA
 library.Visual {    
 	10 = IMG_RESOURCE  
 	10 {
-		file = EXT:nbobase/Resources/Public/img/header.jpg
-		file {}
+		#file = EXT:nbobase/Resources/Public/img/header.jpg
+		file {
 			import = uploads/media/
 			import {  
 				data = levelmedia: -1, "slide"
