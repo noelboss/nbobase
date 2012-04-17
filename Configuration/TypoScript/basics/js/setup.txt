@@ -8,12 +8,13 @@ basics.js {
 			<![endif]-->
 		)
 	}
-
+	
 	jsFooterInline.10 = TEXT
+	jsFooterInline.10.insertData = 1
 	jsFooterInline.10.value (
 		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-9741808-3']);
-		_gaq.push(['_setDomainName', 'sagenja.ch']);
+		_gaq.push(['_setAccount', '{$library.analyticsCode}']);
+		_gaq.push(['_setDomainName', '{getIndpEnv:HTTP_HOST}']);
 		_gaq.push(['_trackPageview']);
     
 		(function() {

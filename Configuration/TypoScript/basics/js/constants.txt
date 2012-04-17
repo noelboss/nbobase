@@ -1,0 +1,31 @@
+[globalString = IENV:HTTP_HOST=*sagenja.ch*]
+	library.analyticsCode = UA-9741808-3
+[end]
+[globalString = IENV:HTTP_HOST=*sagen-ja.at*]
+	library.analyticsCode = UA-9741808-6
+[end]
+[globalString = IENV:HTTP_HOST=*sagen-ja.ch*]
+	library.analyticsCode = UA-9741808-2
+[end]
+[globalString = IENV:HTTP_HOST=*sagen-ja.com*]
+	library.analyticsCode = UA-9741808-1
+[end]
+[globalString = IENV:HTTP_HOST=*sagen-ja.eu*]
+	library.analyticsCode = UA-9741808-8
+[end]
+[globalString = IENV:HTTP_HOST=*sagen-ja.info*]
+	library.analyticsCode = UA-9741808-12
+[end]
+[globalString = IENV:HTTP_HOST=*sagen-ja.li*]
+	library.analyticsCode = UA-9741808-10
+[end]
+
+[globalString = IENV:HTTP_HOST=*sagenja.eu*]
+	library.analyticsCode = UA-9741808-9
+[end]
+[globalString = IENV:HTTP_HOST=*sagenja.info*]
+	library.analyticsCode = UA-9741808-5
+[end]
+[globalString = IENV:HTTP_HOST=*sagenja.li*]
+	library.analyticsCode = UA-9741808-11
+[end]
