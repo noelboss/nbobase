@@ -9,12 +9,15 @@ basics.js {
 		)
 	}
 	
+	
 	jsFooterInline.10 = TEXT
 	jsFooterInline.10.insertData = 1
 	jsFooterInline.10.value (
 		var _gaq = _gaq || [];
+		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', '{$library.analyticsCode}']);
-		_gaq.push(['_setDomainName', '{getIndpEnv:HTTP_HOST}']);
+		_gaq.push(['_setDomainName', '{getIndpEnv:SERVER_NAME}']);
+		_gaq.push(['_setAllowLinker', true]);
 		_gaq.push(['_trackPageview']);
     
 		(function() {
