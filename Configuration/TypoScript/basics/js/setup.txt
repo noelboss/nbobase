@@ -10,13 +10,13 @@ basics.js {
 	}
 	
 	
-	jsFooterInline.10 = TEXT
-	jsFooterInline.10.insertData = 1
-	jsFooterInline.10.value (
+	jsFooterInline.786412123 = TEXT
+	jsFooterInline.786412123.insertData = 1
+	jsFooterInline.786412123.value (
 		var _gaq = _gaq || [];
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', '{$library.analyticsCode}']);
-		_gaq.push(['_setDomainName', '{getIndpEnv:SERVER_NAME}']);
+		_gaq.push(['_setDomainName', '{getenv:SERVER_NAME}']);
 		_gaq.push(['_setAllowLinker', true]);
 		_gaq.push(['_trackPageview']);
     
@@ -33,3 +33,7 @@ basics.js {
 		nbobase = 			EXT:nbobase/Resources/Public/js/application.js
 	}
 }
+
+[globalVar = TSFE : beUserLogin > 0]
+	basics.js.jsFooterInline >
+[end]
