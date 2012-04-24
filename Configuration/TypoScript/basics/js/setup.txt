@@ -9,23 +9,27 @@ basics.js {
 		)
 	}
 	
-	
-	jsFooterInline.786412123 = TEXT
-	jsFooterInline.786412123.insertData = 1
-	jsFooterInline.786412123.value (
-		var _gaq = _gaq || [];
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', '{$library.analyticsCode}']);
-		_gaq.push(['_setDomainName', '{getenv:SERVER_NAME}']);
-		_gaq.push(['_setAllowLinker', true]);
-		_gaq.push(['_trackPageview']);
-    
-		(function() {
-		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	)
+	jsFooterInline {
+		78945613211 = TEXT
+		78945613211.insertData = 1
+		78945613211.value (
+			var _gaq = _gaq || [];
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '{$library.analyticsCode}']);
+			_gaq.push(['_setDomainName', '{getenv:SERVER_NAME}']);
+			_gaq.push(['_setAllowLinker', true]);
+			_gaq.push(['_trackPageview']);
+		)
+		78945613212 = TEXT
+		78945613212.value (    
+			(function() {
+			 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		)
+	}
+
 	
 	includeJSFooter {
 		jq171 = 			EXT:nbobase/Resources/Public/js/jquery-1.7.1.min.js
