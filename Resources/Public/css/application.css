@@ -125,6 +125,16 @@ h1 small{
 	font-size: 0.25em;
 }
 
+
+h1.sj {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h2 i {
+	vertical-align: 0;
+	margin-right: 5px;
+}
+
 h2 small{
 	display:block;
 	font-size: 0.4em;
