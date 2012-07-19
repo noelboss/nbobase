@@ -98,6 +98,9 @@ h2, h1{
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
+.hero-unit h3 {
+	font-weight: bold;
+}
 
 h2{
 	font-size: 3em;
@@ -130,7 +133,7 @@ h1.sj {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h2 i {
+h3 i {
 	vertical-align: 0;
 	margin-right: 5px;
 }
