@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cooluri>
 	<cache>
-		<usecache>0</usecache>
+		<usecache>1</usecache>
 		<params2cool>
 			<checkforchangeevery>1</checkforchangeevery>
 		</params2cool>
