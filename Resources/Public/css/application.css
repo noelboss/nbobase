@@ -19,7 +19,9 @@ p {
 	margin-bottom: 1.5em;
 }
 
-
+.containerOuter {
+	padding-bottom: 20px;
+}
 
 .contentHeader,
 .hero-unit  {
