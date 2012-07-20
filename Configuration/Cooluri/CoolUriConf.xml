@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cooluri>
 	<cache>
-		<usecache>1</usecache>
+		<usecache>0</usecache>
 		<params2cool>
-			<checkforchangeevery>0.1</checkforchangeevery>
+			<checkforchangeevery>1</checkforchangeevery>
 		</params2cool>
 		<cacheparams>0</cacheparams>
 		<cool2params>
-			<oldlinksvalidfor>365</oldlinksvalidfor>
+			<oldlinksvalidfor>30</oldlinksvalidfor>
 		</cool2params>
 		<pagenotfound>
 			<status>HTTP/1.0 404 Not Found</status>
