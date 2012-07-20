@@ -135,6 +135,7 @@ h1.sj {
 	text-align: center;
 }
 
+h3 [class^="icon-"], 
 h3 [class*=" icon-"] {
 	vertical-align: 0;
 	margin-right: 5px;
