@@ -38,6 +38,7 @@ basics.js {
 	includeJSFooter {
 		jq171 = 			EXT:nbobase/Resources/Public/js/jquery-1.7.1.min.js
 		fancybox = 			EXT:nbobase/Resources/Public/js/jquery.fancybox.pack.js
+		bcollapse =			EXT:nbobase/Resources/Public/js/bootstrap-collapse.js
 		nbobase = 			EXT:nbobase/Resources/Public/js/application.js
 	}
 }
