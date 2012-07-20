@@ -134,6 +134,17 @@ h1.sj {
 	font-weight: normal;
 	text-align: center;
 }
+.hero-unit .inner .actionIcons {
+	text-align: center;
+}
+.hero-unit .inner .actionIcons a { 
+	color: #fff;
+	margin-right: 15px;
+}
+.hero-unit .inner .actionIcons a i { 
+	vertical-align: -1px;
+	margin-left: 6px;
+}
 
 h3 [class^="icon-"], 
 h3 [class*=" icon-"] {
