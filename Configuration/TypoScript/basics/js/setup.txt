@@ -21,7 +21,7 @@ basics.js {
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', '{$library.analyticsCode}']);
 			_gaq.push(['_setDomainName', '{getenv:SERVER_NAME}']);
-			_gaq.push(['_setAllowLinker', true]);
+			//_gaq.push(['_setAllowLinker', true]);
 			_gaq.push(['_trackPageview']);
 		)
 		78945613212 = TEXT
