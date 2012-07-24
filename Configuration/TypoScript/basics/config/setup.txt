@@ -37,8 +37,9 @@ config {
 	#// Removes the <?xml ...> tag, also because of IE Bug
 	xmlprologue = none
 
-	# Page content is usually cached. The default cache period is set to 24 hours.
-	cache_period = 0
+	# Page content is usually cached
+	# 14 Tage:
+	cache_period = 1209600
 
 	# Use simulateStaticDocuments instead of Real-URL
 	simulateStaticDocuments = 0
