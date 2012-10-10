@@ -23,7 +23,7 @@
 	
 	
 	// Base settings
-	$TYPO3_CONF_VARS['SYS']['sitename'] = 'Ihre Webseite – www.sagenja.ch';
+	$TYPO3_CONF_VARS['SYS']['sitename'] = 'bissFEST';
 
 	$TYPO3_CONF_VARS['SYS']['compat_version'] = '4.7';	
 	$TYPO3_CONF_VARS['INSTALL']['wizardDone']['tx_coreupdates_installsysexts'] = '1';	//  Modified or inserted by TYPO3 Upgrade Wizard.
@@ -66,7 +66,7 @@
 	$TYPO3_CONF_VARS['BE']['compressionLevel'] = '4';
 	$TYPO3_CONF_VARS['FE']['compressionLevel'] = '6';
 	
-	$TYPO3_CONF_VARS['BE']['loginSecurityLevel'] = 'rsa';
+	$TYPO3_CONF_VARS['BE']['loginSecurityLevel'] = 'normal';
 	
 	if($_SERVER['ENVIRONMENT'] == 'local'){
 		$TYPO3_CONF_VARS['SYS']['systemLog'] = '1';
