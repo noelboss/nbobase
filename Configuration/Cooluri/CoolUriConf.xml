@@ -30,16 +30,16 @@
 			</lookindb>
 		</part>
 		<part>
-			<parameter>tx_nboevents_events[event]</parameter>
+			<parameter>tx_nboevents_events[course]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_course WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
-			<parameter>tx_nboevents_events[course]</parameter>
+			<parameter>tx_nboevents_events[event]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_course WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -52,7 +52,7 @@
 		<part>
 			<parameter>tx_nboevents_events[location]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -116,6 +116,7 @@
 			<parameter>tx_nboevents_events[controller]</parameter>
 			<value key="">Event</value>
 			<value key="">Location</value>
+			<value key="">Course</value>
 			<value key="anmeldung">Reservation</value>
 		</valuemap>
 		<valuemap>

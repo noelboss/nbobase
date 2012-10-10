@@ -61,3 +61,8 @@ config {
 
 	admPanel = 0
 }
+
+[globalString = IENV:HTTP_HOST=local.*] [globalString = IENV:HTTP_HOST=dev.*] [globalString = IENV:HTTP_HOST=sta.*]
+	page.meta.robots = noindex,nofollow
+	config.no_cache = 1
+[global]
