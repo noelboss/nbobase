@@ -73,11 +73,10 @@
 		$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = '1';
 		$TYPO3_CONF_VARS['SYS']['enable_DLOG'] = '1';
 		
-		$TYPO3_CONF_VARS['BE']['loginSecurityLevel'] = 'superchallenged';
 		$TYPO3_CONF_VARS['EXT']['allowLocalInstall'] = '1';
 	
-		$TYPO3_CONF_VARS['GFX']['im_path'] = '/opt/local/bin/';	
-		$TYPO3_CONF_VARS['GFX']['im_path_lzw'] = '/opt/local/bin/';
+		$TYPO3_CONF_VARS['GFX']['im_path'] = '/usr/local/bin/';	
+		$TYPO3_CONF_VARS['GFX']['im_path_lzw'] = '/usr/local/bin/';
 		$TYPO3_CONF_VARS['GFX']['im_combine_filename'] = 'composite';
 		$TYPO3_CONF_VARS['GFX']['im_version_5'] = 'im6';
 		
