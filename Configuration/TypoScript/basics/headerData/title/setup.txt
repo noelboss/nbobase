@@ -12,4 +12,14 @@ basics.headerData.title {
 		field = subtitle//title
 		noTrimWrap =| – ||
 	}
+
+	# Subpage
+	30 = TEXT
+	30 {
+		noTrimWrap =| – ||
+		data = GP:tx_nboevents_events|course
+		wrap = {DB:tx_nboevents_domain_model_course:|:title}  
+		insertData = 1
+		required = 1
+	}
 }
