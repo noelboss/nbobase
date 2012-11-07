@@ -1,8 +1,8 @@
 <?php
 	// Pages:               
 	// make start and endtime respect hours and minuts
-	$GLOBALS['TCA']['pages']['columns']['starttime']['config']['eval'] ='datetime';
-	$GLOBALS['TCA']['pages']['columns']['endtime']['config']['eval'] = 'datetime';     
+	/*$GLOBALS['TCA']['pages']['columns']['starttime']['config']['eval'] ='datetime';
+	$GLOBALS['TCA']['pages']['columns']['endtime']['config']['eval'] = 'datetime';     */
 	 
 	// Render the General Record Storage Page selector as a tree of page
 	t3lib_div::loadTCA('pages');

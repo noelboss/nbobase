@@ -115,7 +115,7 @@
 		<valuemap>
 			<parameter>tx_nboevents_events[controller]</parameter>
 			<value key="">Event</value>
-			<value key="">Location</value>
+			<value key="ort">Location</value>
 			<value key="">Course</value>
 			<value key="anmeldung">Reservation</value>
 		</valuemap>

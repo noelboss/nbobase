@@ -1,0 +1,19 @@
+tt_content.gridelements_pi1.20.10.setup {
+	# ID of gridelement
+	1 < temp.gridelements.defaultGridSetup
+	1 {
+		wrap = <div class="row-fluid">|</div>
+		columns {
+			# colPos ID
+			101 < .default
+			101.wrap = <div class="span6">|</div>
+			102 < .101
+		}
+	}
+	
+	# ID of gridelement
+	2 < .1
+	2.columns.101.wrap = <div class="span4">|</div>
+	2.columns.102.wrap < .2.columns.101.wrap
+	2.columns.103.wrap < .2.columns.101.wrap
+}

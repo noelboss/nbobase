@@ -1,3 +1,4 @@
+
 # Erzwingt, dass das default-Text Element beim Kreieren
 # eines neuen Elements im Frontend statt eines reinen
 # Text-Elements ein Text-Image Element wird.
@@ -12,6 +13,9 @@ TCAdefaults {
 	}
 }     
 
+TCEFORM.tt_content.tx_gridelements_backend_layout {
+  removeChildrenFromList = 1
+}
 TCEFORM.pages { 
 	# 4 shortcut pages
 	starttime.types.4.disabled = 1 
@@ -69,7 +73,7 @@ TCEFORM.pages {
 
 mod.web_layout {
 	disableSearchBox = 1
-	disableIconToolbar = 1
+	disableIconToolbar = 0
 	disableAdvanced = 1
 	hideTables = static_template, static_countries, static_country_zones, static_currencies, static_languages,static_territories,static_taxes,static_markets
 	menu.function {
