@@ -664,6 +664,9 @@ pre code {
 .badge-inverse:hover {
   background-color: #1a1a1a;
 }
+.text-error {
+	color: #b94a48;
+}
 table {
   max-width: 100%;
   border-collapse: collapse;

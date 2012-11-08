@@ -1,0 +1,12 @@
+plugin.tx_powermail {
+	view {
+		# cat=powermail_main/file; type=string; label= Path to template root (FE)
+		templateRootPath = EXT:nbobase/Resources/Private/Extensions/powermail/Templates/
+
+		# cat=powermail_main/file; type=string; label= Path to template partials (FE)
+		partialRootPath = EXT:nbobase/Resources/Private/Extensions/powermail/Partials/
+
+		# cat=powermail_main/file; type=string; label= Path to template layouts (FE)
+		layoutRootPath = EXT:nbobase/Resources/Private/Extensions/powermail/Layouts/
+	}
+}
