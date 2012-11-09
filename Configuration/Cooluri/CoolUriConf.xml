@@ -68,29 +68,6 @@
 		<part>
 			<parameter>tx_nboevents_events[e]</parameter>
 		</part>
-		
-		<part>
-			<parameter>tx_nbowishlist_whishlist[wish]</parameter>
-			<lookindb>
-				<to>SELECT title FROM tx_nbowishlist_domain_model_wish WHERE uid=$1 AND deleted=0 AND hidden=0</to>
-				<t3conv>1</t3conv>
-			</lookindb>
-		</part>
-		<part>
-			<parameter>tx_nbowishlist_whishlist[controller]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nbowishlist_whishlist[action]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nbowishlist_whishlist[newParticipation]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nbowishlist_whishlist[participation]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nbowishlist_whishlist[newPerson]</parameter>
-		</part>
 	</uriparts>
 	<predefinedparts>
 		<part>

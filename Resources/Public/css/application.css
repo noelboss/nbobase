@@ -48,7 +48,7 @@
 
 	.hero-unit .inner {
 		background: url('../img/background.png') repeat;
-		padding: 40px 40px;
+		padding: 40px 40px 20px;
 	}
 	.hero-unit .inner a{
 		color: #8FC9F3;
@@ -115,6 +115,10 @@
 		line-height: 1;
 	}
 	
+	.container h1,
+	.container h2 {
+		letter-spacing: -1px;
+	}
 	
 	h1 small,
 	h2 small,
@@ -232,7 +236,6 @@
 		display:block;
 		font-size: 0.5em;
 		margin: 0.5em 0 1em;
-		letter-spacing: 0px;
 		line-height: 1;
 	}
 
@@ -260,6 +263,8 @@
 	}
 	
 	figcaption {
+		font-style: italic;
+		margin: 10px 4px 4px;
 		color: #999;
 	}
 	
@@ -303,8 +308,31 @@
 		margin-left: 0;
 		overflow: hidden;
 	}
+	.borderbox .csc-textpic-image {
+		display: block;
+		padding: 4px;
+		line-height: 1;
+		border: 1px solid #ddd;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+		-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+		box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+	}
 	
-
+	.borderbox .csc-textpic-image a {
+		display: block;
+		padding: 0;
+		line-height: 1;
+		border: none;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
 }
 @media (min-width: 979px) { 
 	body {
