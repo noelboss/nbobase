@@ -291,6 +291,7 @@
 	
 	.footerlogo h4 {
 		margin-top: 1em;
+		font-weight: bold;
 		font-family: QuattrocentoRomanRegular, Georgia,"Trebuchet MS","Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 	.footerlogo:hover {
