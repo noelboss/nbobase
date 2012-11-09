@@ -9,7 +9,10 @@ styles.content.imgtext {
 	maxW = 940
 	maxWInText = 470
     
+	borderSelector = div.csc-textpic-imagewrap.{$styles.content.imgtext.borderClass} img
+	borderClass = 
+	
 	linkWrap.lightboxEnabled = 1
-	linkWrap.lightboxCssClass = fancybox
+	linkWrap.lightboxCssClass = fancybox thumbnail
 	linkWrap.width = 800
 }

@@ -1,7 +1,6 @@
 library.Logo < library.Links.Home
 library.Logo {
-	#value = Sagen Ja
 	typolink {
-		ATagParams = class="brand"
+		returnLast = url
 	}
 }

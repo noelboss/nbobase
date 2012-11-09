@@ -18,5 +18,11 @@
 			
 			fitToView : true
 		});
+		var $logo = $('.logo');
+		$logo.fadeTo(0,0.9).hover(function(){
+			$logo.stop().fadeTo(300,1);
+		},function(){
+			$logo.stop().fadeTo(300,0.9);
+		});
 	});
 })(jQuery);
