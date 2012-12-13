@@ -25,14 +25,14 @@
 		<part>
 			<parameter>tx_nbogallery_gallery[gallery]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nbogallery_domain_model_gallery WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nbogallery_domain_model_gallery WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
 			<parameter>tx_nboevents_events[event]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -45,7 +45,7 @@
 		<part>
 			<parameter>tx_nboevents_events[location]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -65,7 +65,7 @@
 		<part>
 			<parameter>tx_nbowishlist_whishlist[wish]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nbowishlist_domain_model_wish WHERE uid=$1</to>
+				<to>SELECT title FROM tx_nbowishlist_domain_model_wish WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
