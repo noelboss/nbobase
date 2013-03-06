@@ -1,9 +1,19 @@
-<div class="container containerWrapper ">
-	<div class="row">
-		<div class="span12">
-			<f:cObject typoscriptObjectPath="library.Content.c0" />
-			<hr>
-			<f:render partial="Footer" />
+	<div class="container-subnav">
+		<div class="container">
+			<f:cObject typoscriptObjectPath="library.NavMainContent" />
 		</div>
 	</div>
-</div> 
+	<section>
+		<div class="container">
+			<div class="page-header">
+				<div class="pull-right"><f:cObject typoscriptObjectPath="library.NavLanguage" /></div>
+				<h1><f:cObject typoscriptObjectPath="library.Title" /> <small><f:cObject typoscriptObjectPath="library.Title.Sub" /></small></h1>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<f:cObject typoscriptObjectPath="library.Content.c0" />
+				</div>
+			</div>
+		</div>
+		<f:render partial="Footer" />
+	</section>

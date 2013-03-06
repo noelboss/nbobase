@@ -1,19 +1,18 @@
 <footer>
 	<div class="container">
-		<div class="row">
-			<div class="span6">
-		  		<p>
-				&copy; <f:cObject typoscriptObjectPath="library.Date.Year" /> bissFEST. Umsetzung durch <a href="http://www.noelboss.ch">noelboss.ch</a>. Alle Rechte vorbehalten.
-				</p>
+		<div class="row-fluid">
+			<div class="span3 contact">
+				<f:cObject typoscriptObjectPath="library.Content.c5" />
 			</div>
-			<div class="span6">
-				<a href="{f:uri.page(pageUid:'16')}" class="footerlogo">
-					<f:image src="EXT:nbobase/Resources/Public/img/bissfest-plate-small.png" alt="bissFEST" />
-					<h4>bissFEST</strong>
-					<h5>Kochschule<br/>
-						Treffpunkt für Feinschmecker
-					</h5>
-				</a>
+			<div class="span5 bankdetails">
+				<f:cObject typoscriptObjectPath="library.Content.c6" />
+			</div>
+			<div class="span4 copyright">
+				<f:cObject typoscriptObjectPath="library.NavMainFooter" />
+				<p>
+					&copy; <f:cObject typoscriptObjectPath="library.Date.Year" /> Casa Esperanca, all rights reserved.<br/>
+					<small>Created by <a class="muted" href="http://www.noelboss.ch">Noel Bossart</a></small>
+				</p>
 			</div>
 		</div>
 	</div>

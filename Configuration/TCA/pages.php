@@ -19,6 +19,11 @@
 			),
 		),
 	);
+	
+	// No Translate to anymore
+	$TCA['tt_content']['columns']['header']['l10n_mode'] = '';
+	$TCA['tt_content']['columns']['bodytext']['l10n_mode'] = '';
+	
 	$TCA['pages']['columns']['storage_pid']['config'] = array_merge(
 		$TCA['pages']['columns']['storage_pid']['config'], $tempConfiguration
 	);

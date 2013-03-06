@@ -1,6 +1,6 @@
 library.NavLanguage = HMENU
 library.NavLanguage {
-	noBlur = 1
+	
 	special = language
 	special.value = 0,1,2         
 	special.normalWhenNoLanguage = 0   
@@ -13,27 +13,24 @@ library.NavLanguage {
 	
 	1 = TMENU
 	1 {      
-		noBlur = 1
-	    stdWrap{
-			#required = 1
-	    	wrap ( 
-			<div class="mod modNavLanguage">
-				<ul>
-					|
-				</ul>
-			</div>
-			)    
-		}    
 		
+	    wrap = <div class="btn-group" role="meno">|</div>
+		
+		NO = 1
 		NO { 
-			wrapItemAndSub = <li>|</li> |*| <li>|</li> |*| <li>|</li>
+			ATagParams = class="btn"
 			stdWrap.cObject = TEXT
 			stdWrap.cObject {
-				value = {$library.NavLanguage.0} || {$library.NavLanguage.1} || {$library.NavLanguage.2}
+				value = English || Deutsch || Português
 			}  
 		}  
+
+		ACT = 1
+		ACT < .NO
+		ACT.ATagParams = class="btn active"
+
+		
 		# don't display not translated Pages:  
-		#USERDEF1 < .NO 
 		USERDEF1 = 1             
 		USERDEF1 {   
 			doNotLinkIt = 1 
@@ -42,5 +39,5 @@ library.NavLanguage {
 				value =   
 			}
 		}  
-	}    
-}          
+	}
+}

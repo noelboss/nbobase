@@ -1,6 +1,0 @@
-library.SubTitle = COA
-library.SubTitle {
-	10 = HTML
-	10.value = {page:subtitle}
-	10.value.insertData = 1
-}

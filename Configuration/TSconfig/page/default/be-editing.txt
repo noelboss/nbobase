@@ -126,7 +126,7 @@ mod.web_layout {
 	menu.function {
 		0=0
 		1=1
-		2=0
+		2=1
 		3=0
 		4=0
 	}
@@ -136,15 +136,13 @@ mod.web_layout {
 mod.web_list {	   
 	hideTables = tt_content
 	listOnlyInSingleTableView = 0
-	clickTitleMode = edit
-	alternateBgColors = 1
 	#allowedNewTables = pages, be_groups, be_users, sys_filemounts, sys_language, sys_domain, sys_workspace, sys_template
 }
 
 TCEMAIN{
 	default {
 	  disablePrependAtCopy = 1
-	  disableHideAtCopy = 0
+	  disableHideAtCopy = 1
 	}
 	translateToMessage = 
 }

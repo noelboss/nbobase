@@ -11,7 +11,7 @@ config {
 	
 	no_cache 					= 0
 
-	removeDefaultJS 			= 1
+	removeDefaultJS 			= 0	
 	moveJsFromHeaderToFooter	= 1
 	compressJs					= 1
 
@@ -22,47 +22,38 @@ config {
 	index_enable				= 0
 	index_externals				= 0
 
-	doctype 					= html5
-	metaCharset 				= utf-8
-	additionalHeaders 			= Content-Type:text/html;charset=utf-8
-	renderCharset				= utf-8
-	xhtml_cleaning				= 1
-	spamProtectEmailAddresses 	= 0
+	spamProtectEmailAddresses = 2 
+	spamProtectEmailAddresses_atSubst = (at)
 	headerComment 				=
 	enableContentLengthHeader	= 1
 	notification_email_encoding = utf-8
 	notification_email_charset 	= utf-8
 	admPanel				 	= 1
 
-	#// Removes the <?xml ...> tag, also because of IE Bug
-	xmlprologue = none
-
 	# Page content is usually cached
 	# 14 Tage:
-	cache_period = 1209600
-
-	# Use simulateStaticDocuments instead of Real-URL
-	simulateStaticDocuments = 0
+	cache_period 				= 1209600
 
 	# Send cache headers with server
-	sendCacheHeaders = 1
+	sendCacheHeaders 			= 1
 
 	# If set, the stdWrap property "prefixComment" will be disabled, thus preventing any revealing and spaceconsuming comments in the HTML source code
-	disablePrefixComment = 0
+	disablePrefixComment 		= 1
 
 	# this will prefix either a relative or absolute path
-	prefixLocalAnchors = all
+	prefixLocalAnchors 			= all
+	#xhtml_cleaning 				= 1
 
 	# Prefix local Path's with a /
-	absRefPrefix = /
+	absRefPrefix 				= /
 
 	#// Removes default Title. Is set in headerdara/setup.txt
-	noPageTitle = 1
+	noPageTitle 				= 1
 
-	admPanel = 0
+	admPanel 					= 0
 }
 
 [globalString = IENV:HTTP_HOST=local.*] [globalString = IENV:HTTP_HOST=dev.*] [globalString = IENV:HTTP_HOST=sta.*]
-	page.meta.robots = noindex,nofollow
-	config.no_cache = 1
+	page.meta.robots			= noindex,nofollow
+	config.no_cache 			= 1
 [global]

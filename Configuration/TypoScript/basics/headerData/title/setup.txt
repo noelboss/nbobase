@@ -4,7 +4,7 @@ basics.headerData.title {
 
 	# Startpage
 	10 = TEXT
-	10.data = leveltitle:{$nbobase.entryLevel.0}
+	10.data = levelfield:0, title
 
 	# Subpage
 	20 = TEXT

@@ -15,26 +15,24 @@ page {
 	
 	includeCSS < basics.css.includeCSS
 
+	includeJSFooterlibs < basics.js.jsFooterInline
 	jsFooterInline < basics.js.jsFooterInline
 	includeJSFooter < basics.js.includeJSFooter
 	
 	10 < basics.templates
 }
 
-#text = PAGE
-#text {
-#    typeNum = 99
-#
-#    config {
-#        disableAllHeaderCode = 1
-#        additionalHeaders = Content-type: text/plain
-#    }
-#
-#
-#
-#    10 =< library.Template
-#    10 {
-#		file = EXT:nbobase/Resources/Public/static/index.txt
-#        format = txt
-#    }
-#}
+iframe = PAGE
+iframe {
+	typeNum = 99
+	
+	config {
+		disableAllHeaderCode = 1
+	}
+	
+	10 < basics.templates
+	10 {
+		file >
+		file = EXT:nbobase/Resources/Private/Templates/iframe.html
+	}
+}

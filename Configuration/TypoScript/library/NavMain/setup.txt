@@ -1,33 +1,183 @@
-library.NavMain = HMENU
-library.NavMain {
-    entryLevel = {$nbobase.entryLevel.0}
-    protectLVar = 1
+library.NavMainHome = HMENU
+library.NavMainHome {
+	special = directory
+	special.value = 40
+	protectLVar = 1
+	maxItems = 1 
+	includeNotInMenu = 1
+	
+	# First level
+	1 = TMENU
+	1 {
+		expAll = 1
 
-    # First level
-    1 = TMENU
-    1 {
-        expAll = 1
-		noBlur = 1
-
-        NO = 1
-        NO {
-			wrapItemAndSub.cObject = TEXT
-            wrapItemAndSub.cObject{
-				value = <li>|</li> |*| <li>|</li> |*|  <li class="last">|</li>
-            	insertData = 1
-			}
-			htmlSpecialChars = 1
-			htmlSpecialChars.preserveEntities = 1
-       }
-
-        ACT < .NO
-		ACT {
-			wrapItemAndSub.cObject{
-				value = <li class="active">|</li> |*| <li class="active">|</li> |*|  <li class="active last">|</li>
-            	insertData = 1
-			}
+		NO = 1
+		NO {
+			stdWrap.cObject = TEXT
+			stdWrap.cObject.field = title
+			ATagParams = class="brand muded"
 		}
 
-        SPC = 0
-    }
+		ACT < .NO
+		ACT {
+			ATagParams = class="brand muded brand-active"
+		}
+	}
+}
+
+library.NavMain = HMENU
+library.NavMain {
+	special = directory
+	special.value = 40
+	protectLVar = 1
+	wrap = <ul class="nav" role="menu"><li class="divider-vertical"></li>|</ul>
+	
+	# First level
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO = 1
+		NO {
+			field = nav_title // title
+			ATagParams = class="action" |*| |*| 
+			wrapItemAndSub =<li>|</li> |*|<li>|</li>|*|<li>|</li>
+			htmlSpecialChars = 1
+			htmlSpecialChars.preserveEntities = 1
+		}
+
+		ACT < .NO
+		ACT {
+			ATagParams = class="action" |*| |*| 
+			field = nav_title // title
+			wrapItemAndSub =<li class="active">|</li> |*| <li class="active">|</li> |*|  <li class="active">|</li>
+		}
+		
+
+		IFSUB < .NO
+		IFSUB {
+			ATagParams = class="action dropdown-toggle" data-toggle="dropdown" |*| class="dropdown-toggle" data-toggle="dropdown"  |*| class="dropdown-toggle" data-toggle="dropdown" 
+			stdWrap.wrap = |&nbsp;<b class="caret"></b>
+			wrapItemAndSub =<li class="dropdown">|</li> |*| <li class="dropdown">|</li> |*| <li class="dropdown">|</li> 
+		}
+
+		ACTIFSUB < .IFSUB
+		ACTIFSUB {
+			ATagParams = class="action dropdown-toggle" data-toggle="dropdown" |*| class="dropdown-toggle" data-toggle="dropdown" |*| class="dropdown-toggle" data-toggle="dropdown"
+			wrapItemAndSub =<li class="dropdown active">|</li> |*| <li class="dropdown active">|</li> |*| <li class="dropdown active">|</li>
+		}
+		
+	}
+	2 < .1
+	2 {
+		NO.ATagParams = 
+		ACT < .NO
+		wrap = <ul class="dropdown-menu">|</ul>
+		IFSUB > 
+		ACTIFSUB >
+	}
+}
+
+library.NavMainRight = HMENU
+library.NavMainRight {
+	special = directory
+	special.value = 37
+	protectLVar = 1
+	wrap = <div class="btn-group pull-right">|</div>
+
+	1 = TMENU
+	1 {
+		expAll = 1
+	
+		NO = 1
+		NO {
+			ATagParams = class="btn" |*| class="btn" |*| class="btn btn-{$library.NavMainRight.btnClass}"
+		}
+		
+		IFSUB < .NO
+		IFSUB {
+			ATagParams = class="btn dropdown-toggle" data-toggle="dropdown" |*|  class="btn dropdown-toggle" data-toggle="dropdown" |*|  class="btn dropdown-toggle btn-{$library.NavMainRight.btnClass}" data-toggle="dropdown"
+			stdWrap.wrap = |&nbsp;<b class="caret"></b>
+		}
+		
+		
+		ACT < .NO
+		ACT {
+			ATagParams = class="btn active" |*| class="btn active" |*| class="btn btn-{$library.NavMainRight.btnClass} active"
+		}
+		
+		ACTIFSUB < .IFSUB
+		ACTIFSUB {
+			ATagParams = class="btn dropdown-toggle active" data-toggle="dropdown" |*| class="btn dropdown-toggle active" data-toggle="dropdown"  |*| class="btn dropdown-toggle active btn-{$library.NavMainRight.btnClass}" data-toggle="dropdown" 
+		}
+	}
+	
+	2 = TMENU
+	2 {
+		expAll = 1
+
+		wrap = <ul class="dropdown-menu">|</ul>
+		NO = 1
+		NO {
+			wrapItemAndSub = <li>|</li>
+		}
+		ACT < .NO
+		ACT {
+			wrapItemAndSub = <li class="active">|</li>
+			ATagParams = class="active"
+		}
+	}
+
+}
+
+
+library.NavMainContent = HMENU
+library.NavMainContent {
+	entryLevel = 2
+	protectLVar = 1
+	wrap = <ul class="nav nav-tabs nav-content tabs-below">|</ul>
+
+	# First level
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO = 1
+		NO {
+			wrapItemAndSub = <li>|</li>
+			htmlSpecialChars = 1
+			htmlSpecialChars.preserveEntities = 1
+	   }
+
+		ACT < .NO
+		ACT {
+			wrapItemAndSub.cObject{
+				value = <li class="active">|</li> |*| <li class="active">|</li> |*|	 <li class="active last">|</li>
+				insertData = 1
+			}
+		}
+	}
+}
+
+library.NavMainFooter = HMENU
+library.NavMainFooter {
+	special = directory
+	special.value = 44
+	protectLVar = 1
+	wrap = <div class="pagination"><ul>|</ul></div>
+	
+	# First level
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO = 1
+		NO {
+			wrapItemAndSub = <li>|</li>
+		}
+
+		ACT < .NO
+		ACT {
+		}
+	}
 }

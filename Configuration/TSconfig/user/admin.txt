@@ -37,11 +37,9 @@ options {
 	# options.alertPopups = 255 - 1 -2 = 252
 	alertPopups = 252
 	# Enable Cache Options for Authors
-  	clearCache {
+	clearCache {
 		all = 1
-  		pages = 1 
-		nxbase = 1
-		nxbaseCssSuffix = ie,ie6,ie7,ie8,ie9
+		pages = 1 
 	}
   	# shortcut frame for each BE-user
   	shortcutFrame = 0

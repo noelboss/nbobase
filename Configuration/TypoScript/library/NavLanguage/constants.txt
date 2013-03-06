@@ -1,5 +1,5 @@
 library.NavLanguage {
 	0 = English
 	1 = Deutsch
-	2 = Français
+	2 = Portugues
 }       

@@ -1,21 +1,17 @@
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<h1 class="logo">
-				<a href="<f:cObject typoscriptObjectPath="library.Logo" />" title="bissFEST">
-					<f:image src="EXT:nbobase/Resources/Public/img/bissfest-table-menu.png" alt="bissFEST" />
-					<strong>bissFEST</strong>
-				</a>
-			</h1>
-			<div class="nav-collapse">
-				<ul class="nav">
+<div class="navbar-wrapper">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<f:cObject typoscriptObjectPath="library.NavMainHome" />
+				<div class="nav-collapse collapse">
 					<f:cObject typoscriptObjectPath="library.NavMain" />
-				</ul>
+					<f:cObject typoscriptObjectPath="library.NavMainRight" />
+				</div>
 			</div>
 		</div>
 	</div>

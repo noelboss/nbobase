@@ -1,13 +1,27 @@
 library.Title = COA
 library.Title {
-	10 = HTML
-	10.value = {page:title}
-	10.value.insertData = 1
+	10 = TEXT
+	10 {
+		data = levelfield: -2, title
+		override.data = levelfield: -2, nav_title
+		if.isFalse.data = levelfield: -1, subtitle
+	}
+	
+	20 = TEXT
+	20 {
+		data = levelfield: -1, title
+		if.isTrue.data = levelfield: -1, subtitle
+	}
 }
 
-library.Title.Sub = COA
+
+library.Title.Sub = TEXT
 library.Title.Sub {
-	10 = HTML
-	10.value = {page:subtitle}
-	10.value.insertData = 1
+	data = levelfield: -1, title
+	override.data = levelfield: -1, subtitle
+}
+
+library.Title.SubSub = TEXT
+library.Title.SubSub {
+	data = leveltitle: -1
 }

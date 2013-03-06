@@ -16,6 +16,8 @@ library.Content.c4.select.where = colPos=4
 
 library.Content.c5 < styles.content.get
 library.Content.c5.select.where = colPos=5
+library.Content.c5.slide = -1
 
 library.Content.c6 < styles.content.get
 library.Content.c6.select.where = colPos=6
+library.Content.c6.slide = -1

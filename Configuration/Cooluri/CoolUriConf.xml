@@ -15,7 +15,7 @@
 		</pagenotfound>
 	</cache>
 	<pagepath>
-		<title>alias,tx_realurl_pathsegment,title</title>
+		<title>alias,tx_realurl_pathsegment,nav_title,title,subtitle</title>
 		<saveto>id</saveto>
 		<default>0</default>
 		<userfunc>tx_cooluri-&gt;getPageTitle</userfunc>
@@ -28,45 +28,6 @@
 				<to>SELECT title FROM tx_nbogallery_domain_model_gallery WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[course]</parameter>
-			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_course WHERE uid=$1 AND deleted=0 AND hidden=0</to>
-				<t3conv>1</t3conv>
-			</lookindb>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[event]</parameter>
-			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1 AND deleted=0 AND hidden=0</to>
-				<t3conv>1</t3conv>
-			</lookindb>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[controller]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[action]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[location]</parameter>
-			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1 AND deleted=0 AND hidden=0</to>
-				<t3conv>1</t3conv>
-			</lookindb>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[newReservation]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[reservation]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[newPerson]</parameter>
-		</part>
-		<part>
-			<parameter>tx_nboevents_events[e]</parameter>
 		</part>
 	</uriparts>
 	<predefinedparts>
@@ -86,40 +47,10 @@
 	<valuemaps>
 		<valuemap>
 			<parameter>L</parameter>
-			<value key="">0</value>
-			<value key="en">1</value>
-		</valuemap>
-		<valuemap>
-			<parameter>tx_nboevents_events[controller]</parameter>
-			<value key="">Event</value>
-			<value key="ort">Location</value>
-			<value key="">Course</value>
-			<value key="anmeldung">Reservation</value>
-		</valuemap>
-		<valuemap>
-			<parameter>tx_nboevents_events[action]</parameter>
-			<value key="">show</value>
-			<value key="">list</value>
-			<value key="neu">new</value>
-			<value key="bearbeiten">edit</value>
-			<value key="loeschen">delete</value>
-		</valuemap>
-		<valuemap>
-			<parameter>tx_nbowishlist_whishlist[controller]</parameter>
-			<value key="">Wish</value>
-			<value key="schenken">Participation</value>
-		</valuemap>
-		<valuemap>
-			<parameter>tx_nbowishlist_whishlist[action]</parameter>
-			<value key="">show</value>
-			<value key="">list</value>
-			<value key="neu">new</value>
-			<value key="bearbeiten">edit</value>
-			<value key="loeschen">delete</value>
-		</valuemap>
-		<valuemap>
-			<parameter>tx_nboevents_events[e][reskey]</parameter>
-			<value key="fehler">1</value>
+			<value key="en"></value>
+			<value key="en">0</value>
+			<value key="de">1</value>
+			<value key="pt">2</value>
 		</valuemap>
 	</valuemaps>
 
