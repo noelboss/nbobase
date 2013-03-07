@@ -11,7 +11,7 @@ config {
 	
 	no_cache 					= 0
 
-	removeDefaultJS 			= 1
+	removeDefaultJS 			= 0	
 	moveJsFromHeaderToFooter	= 1
 	compressJs					= 1
 
@@ -27,7 +27,8 @@ config {
 	additionalHeaders 			= Content-Type:text/html;charset=utf-8
 	renderCharset				= utf-8
 	xhtml_cleaning				= 1
-	spamProtectEmailAddresses 	= 0
+	spamProtectEmailAddresses = 2 
+	spamProtectEmailAddresses_atSubst = (at)
 	headerComment 				=
 	enableContentLengthHeader	= 1
 	notification_email_encoding = utf-8
