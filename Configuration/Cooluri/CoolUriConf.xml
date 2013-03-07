@@ -32,7 +32,8 @@
 		<part>
 			<parameter>tx_nboevents_events[course]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_course WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_rchmplusevents_domain_model_event as tt1, (SELECT COUNT(*) AS number FROM tx_rchmplusevents_domain_model_event WHERE title=(SELECT title FROM tx_rchmplusevents_domain_model_event WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1
+				<to>SELECT CONCAT(title,CONCAT('-',type)) FROM tx_nboevents_domain_model_course WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
