@@ -16,3 +16,6 @@ styles.content.imgtext {
 	linkWrap.lightboxCssClass = fancybox thumbnail
 	linkWrap.width = 800
 }
+
+# Standard-Überschriften als H4
+styles.content.defaultHeaderType = 4

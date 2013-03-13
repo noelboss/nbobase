@@ -4,6 +4,8 @@ library.Title {
 	10 {
 		data = levelfield: -2, title
 		override.data = levelfield: -2, nav_title
+		override.noTrimWrap = || / |
+		override.required = 1
 		if.isFalse.data = levelfield: -1, subtitle
 	}
 	

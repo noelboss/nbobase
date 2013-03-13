@@ -22,7 +22,7 @@ config {
 	index_enable				= 0
 	index_externals				= 0
 
-	spamProtectEmailAddresses = 2 
+	spamProtectEmailAddresses   = 2 
 	spamProtectEmailAddresses_atSubst = (at)
 	headerComment 				=
 	enableContentLengthHeader	= 1

@@ -1,7 +1,7 @@
 library.NavMainHome = HMENU
 library.NavMainHome {
 	special = directory
-	special.value = 40
+	special.value = 30
 	protectLVar = 1
 	maxItems = 1 
 	includeNotInMenu = 1
@@ -147,17 +147,56 @@ library.NavMainContent {
 			wrapItemAndSub = <li>|</li>
 			htmlSpecialChars = 1
 			htmlSpecialChars.preserveEntities = 1
-	   }
+		}
 
 		ACT < .NO
 		ACT {
-			wrapItemAndSub.cObject{
-				value = <li class="active">|</li> |*| <li class="active">|</li> |*|	 <li class="active last">|</li>
-				insertData = 1
-			}
+			wrapItemAndSub = <li class="active">|</li>
+		}
+		
+		
+		IFSUB < .NO
+		IFSUB.ATagParams = class="hassub"
+		
+		ACTIFSUB < .ACT
+		ACTIFSUB.ATagParams = class="hassub"
+	}
+	
+	
+	2 = TMENU
+	2 {
+		expAll = 1
+    
+		wrap (
+			<a href="#" class="subdrop dropdown-toggle" data-toggle="dropdown">
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">|</ul>
+		)
+		stdWrap.before.cObject = TEXT
+		stdWrap.before.cObject = TEST
+		NO = 1
+		NO {
+			wrapItemAndSub = <li>|</li>
+		}
+		ACT < .NO
+		ACT {
+			wrapItemAndSub = <li class="active">|</li>
+			ATagParams = class="active"
 		}
 	}
 }
+
+<div class="dropdown">
+  <!-- Link or button to toggle dropdown -->
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li><a tabindex="-1" href="#">Action</a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+    <li><a tabindex="-1" href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a tabindex="-1" href="#">Separated link</a></li>
+  </ul>
+</div>
 
 library.NavMainFooter = HMENU
 library.NavMainFooter {

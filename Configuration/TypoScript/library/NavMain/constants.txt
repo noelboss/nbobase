@@ -1,1 +1,1 @@
-library.NavMainRight.btnClass = primary     
+library.NavMainRight.btnClass = none     

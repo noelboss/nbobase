@@ -1,9 +1,7 @@
-basics.css = PAGE
-basics.css{
+basics.css {
 	includeCSS {
 		fonts = 		EXT:nbobase/Resources/Public/fonts/fonts.css
-		bootstrap20 = 	EXT:nbobase/Resources/Public/css/bootstrap/bootstrap.css
-		fancybox = 		EXT:nbobase/Resources/Public/css/fancybox/jquery.fancybox.css
+		bootstrap20 = 	EXT:nbobase/Resources/Public/css/bootstrap/bootstrap.min.css
 		nbobase = 		EXT:nbobase/Resources/Public/css/application.css
 	}
 }

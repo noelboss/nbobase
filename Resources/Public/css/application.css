@@ -8,10 +8,51 @@ body * {
 	background: transparent url('../img/background3.jpg') no-repeat 50% 50%;
 }
 
+
+.lead {
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+
+.well {
+	padding: 8px;
+}
+
 .nav {
 	margin-bottom: 0;
 	border-bottom: 0;
 }
+
+.donateform img {
+	margin-top: 1em;
+}
+
+
+.container-subnav .nav > li > a {
+	display: inline-block;
+}
+
+.container-subnav .nav > li {
+	position: relative;
+}
+
+.container-subnav .nav > li > a.hassub {
+	-webkit-border-radius: 4px 0 0 0;
+	-moz-border-radius: 4px 0 0 0;
+	border-radius: 4px 0 0 0;
+	padding-right: 8px;
+}
+
+.container-subnav .nav li a.subdrop {
+	margin-left: -3px;
+	padding-left: 8px;
+	-webkit-border-radius: 0 4px 0 0;
+	-moz-border-radius: 0 4px 0 0;
+	border-radius: 0 4px 0 0;
+	border-left: 0;
+}
+
 
 .navbar-inner {
 	-webkit-border-radius: 6px;
@@ -19,23 +60,40 @@ body * {
 	border-radius: 6px;
 }
 
+.nav .divider,
 .nav .divider-vertical {
 	margin: 0;
 }
 
+.news-list-container a,
+.news-latest-container a{
+	color: #333;
+}
+
+.news-latest-container .media {
+	margin: 5px 0 15px;
+}
+
+.news-list-container a:hover,
+.news-latest-container a:hover{
+	color: #666;
+	text-decoration: none;
+}
+
 /*RGBA(6.00, 100.00, 201.00, 1.00)*/
 .brand-active {
+	color: #222;
 	-webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 	box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 }
 
-.nav a.action {
+/*.nav a.action {
 	background: #eee;
 	-webkit-box-shadow: inset 0 0px 8px rgba(255,255,255,0.125);
 	-moz-box-shadow: inset 0 0px 8px rgba(255,255,255,0.125);
 	box-shadow: inset 0 0px 3px rgba(255,255,255,1);
-}
+}*/
 
 section,
 .navbar-inner  {
@@ -46,17 +104,31 @@ section,
 
 footer {
 	font-size: 0.9em;
-	padding: 20px 0;
-	border-top: 1px solid #eee;
+	padding: 20px 0 20px;
+	border-top: 1px solid #ddd;
 	position: relative;
-	bottom: -20px;
+	bottom: -80px;
 	background: #fff;
 	height: 120px;
+	background: #eee;
 }
 footer .copyright {
+	color: #888;
+	clear: right;
+	text-align: right;
 }
+footer .copyright a {
+	color: #aaa;
+	clear: right;
+}
+
 footer .pagination {
+	float:right;
 	margin-top: 0;
+}
+
+footer .pagination a {
+	background: #e5e5e5;
 }
 
 .brand-active {
@@ -92,3 +164,42 @@ footer .pagination {
 	top: -38px;
 }
 /* content */
+
+@media (max-width:979px){
+	
+	.brand-active {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow:none;
+	}
+	
+	.head {
+		margin: 0 -20px;
+	}
+	section {
+		-moz-box-shadow: 0px 0px 0px #fff;
+		-webkit-box-shadow: 0px 0px 0px #fff;
+		box-shadow: 0px 0px 0px #fff;
+	}
+	
+	footer {
+		background: #fff;
+	}
+	.page-header small {
+		display: block;
+	}
+	footer .row-fluid .more {
+		margin-left: 0;
+		padding-bottom: 20px;
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+	footer .copyright {
+		text-align: left;
+	}
+
+	footer .pagination {
+		float: none;
+	}
+}

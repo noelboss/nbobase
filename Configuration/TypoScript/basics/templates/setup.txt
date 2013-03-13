@@ -6,7 +6,11 @@ basics.templates{
 	partialRootPath = EXT:nbobase/Resources/Private/Templates/partials/
 	layoutRootPath = EXT:nbobase/Resources/Private/Templates/layouts/
 	variables {
-		
+		template = TEXT
+		template {
+			data = levelfield:-1, backend_layout_next_level, slide
+			override.field = backend_layout
+		}
 	}
 	
 	file.stdWrap.cObject = CASE
@@ -21,13 +25,5 @@ basics.templates{
 		# Set a second [3] Template, our full size Template
 		1 = TEXT
 		1.value = EXT:nbobase/Resources/Private/Templates/index.html
-		
-		# Set also the first [2] Template, our 3 column Template
-		2 = TEXT
-		2.value = EXT:nbobase/Resources/Private/Templates/content.html
-		
-		# Set also the first [2] Template, our 3 column Template
-		3 = TEXT
-		3.value = EXT:nbobase/Resources/Private/Templates/index-nocontent.html
 	}
 }

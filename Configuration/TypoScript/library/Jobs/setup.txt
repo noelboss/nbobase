@@ -1,0 +1,22 @@
+library.Jobs.CurrentJob =COA
+library.Jobs.CurrentJob {
+	20 = TEXT
+	20 {
+		wrap = <div class="alert alert-info"><h4>|</h4></div>
+		data = page : subtitle // page : title
+	}
+}
+
+library.JobsForm = RECORDS
+library.JobsForm {
+    tables = tt_content
+    source = 69
+}
+
+library.JobsBackLink = TEXT
+library.JobsBackLink {
+	data = pages:51:subtitle
+	typolink.before = <i class="icon icon-backward"></i>
+	typolink.parameter = 51
+	typolink.ATagParams = class="btn"
+}

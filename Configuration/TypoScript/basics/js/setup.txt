@@ -1,5 +1,6 @@
 basics.js = PAGE
 basics.js {
+	headerData = COA
 	headerData {
 		10 = TEXT
 		10.value (
@@ -35,13 +36,10 @@ basics.js {
 	}
 
 	includeJSFooterlibs {
-		jq171 = 			EXT:nbobase/Resources/Public/js/jquery-1.7.1.min.js
+		10_jquery 		=	EXT:nbobase/Resources/Public/js/jquery.min.js
+		20_bootstrap 	=	EXT:nbobase/Resources/Public/js/bootstrap.min.js
 	}
 	includeJSFooter {
-		jq171 = 			EXT:nbobase/Resources/Public/js/jquery-1.7.1.min.js
-		fancybox = 			EXT:nbobase/Resources/Public/js/jquery.fancybox.pack.js
-		bootstrap =			EXT:nbobase/Resources/Public/js/bootstrap.min.js
-		#bcollapse =			EXT:nbobase/Resources/Public/js/bootstrap-collapse.js
 		nbobase = 			EXT:nbobase/Resources/Public/js/application.js
 	}
 }

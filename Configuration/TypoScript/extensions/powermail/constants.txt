@@ -1,4 +1,7 @@
 plugin.tx_powermail {
+	settings {
+		javascript.powermailJQuery = 
+	}
 	view {
 		# cat=powermail_main/file; type=string; label= Path to template root (FE)
 		templateRootPath = EXT:nbobase/Resources/Private/Extensions/powermail/Templates/

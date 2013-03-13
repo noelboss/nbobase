@@ -1,77 +1,183 @@
-
 admPanel { 
 	enable{
-		edit = 0
-		preview = 1 
-	}
-
-	module {
-		edit.forceDisplayIcons = 0 
-		edit.forceDisplayFieldIcons = 0 
-		preview = 1 
+		all = 1
+		edit = 1
+		preview =1
+		cache=1
+		publish=1
+		tsdebug=1
+		info=1
 	}
 
 	override {
-		preview.showHiddenPages = 0 
-		preview.showHiddenRecords = 0 
-		edit.displayFieldIcons = 0 
-		edit.displayIcons = 0
 		# disable TypoScript Cache
-		tsdebug.forceTemplateParsing = 1
+		tsdebug.forceTemplateParsing = 0
 	}
-	hide = 1
+	hide = 0
 }
+
+# Erzwingt, dass das default-Text Element beim Kreieren
+# eines neuen Elements im Frontend statt eines reinen
+# Text-Elements ein Text-Image Element wird.
+TCAdefaults {
+	tt_content{
+		CType = textpic   
+		imageorient = 2       
+	}
+}   
 
 setup.override {
 	edit_wideDocument = 1
-	edit_docModuleUpload = 0 
-	thumbnailsByDefault =1
+	edit_docModuleUpload = 0
 }
 
-options {         
-	RTESmallWidth = 98&%
-	RTESmallHeight = 500
-	RTELargeWidthIncrement = 0
-	
+options {                        
 	# disable warning by typeChange and copy/move/paste
 	# options.alertPopups = 255 - 1 -2 = 252
-	alertPopups = 252
+	options.alertPopups = 252
 	# Enable Cache Options for Authors
-	clearCache {
-		all = 1
-		pages = 1 
-	}
-  	# shortcut frame for each BE-user
-  	shortcutFrame = 0
-  	shortcut_onEditId_keepExistingExpanded = 0
+	clearCache.all = 1
+	clearCache.pages = 1
+	# shortcut frame for each BE-user
+	shortcutFrame = 0
+	shortcut_onEditId_keepExistingExpanded = 0
 	# Adds a "Save and New" Icon to the toolbar
-	saveDocNew = 0 
-	saveDocView = 0
+	saveDocNew = 0          
 	# Enable for individual Tables (Records)
-  	# saveDocNew.[table] = 1
-	# Erstellen von Folders über das Upload Folder
-  	createFoldersInEB = 1
-  	//modify context Menus          
-    # Shows the ID in front of the Page Title
-	pageTree{
-		showPageIdWithTitle = 1      
-		disableIconLinkToContextmenu = 1
-	}
-
-	folderTree {
-		disableIconLinkToContextmenu = 1
-	}                
-	
-  	# contextMenu.pageTree.disableItems = view, edit
+	# saveDocNew.[table] = 1
+	# Erstellen von Folders Ã¼ber das Upload Folder
+	createFoldersInEB = 1
+	//modify context Menus          
+	# Shows the ID in front of the Page Title
+	pageTree.showPageIdWithTitle = 0
+	# contextMenu.pageTree.disableItems = view, edit
 	contextMenu.pageTree.disableItems = info
-	
-	# No-brainer. Thumbnails make life easier.
-	file_list.enableDisplayThumbnails = 1
 }
 
-
 page.TCEFORM {
+	pages {
+		layout.disabled = 0
+		title.disabled = 0      
+		subtitle.disabled = 0
+		nav_title.disabled = 0
+		nav_hide.disabled = 0
+		doktype.disabled = 0
+		# doktype:
+			#1 = Standard
+			#2 = Erweitert
+			#3 = Externe URL
+			#4 = Shortcut
+			#5 = Nicht im MenÃ¼ 
+			#6 = Backend Benutzer Bereich
+			#7 = Mount Seite
+			#199 = Abstand
+			#254 = Sysordner
+			#255 = Recycler
+			#--div-- = Trennlinie 
+		doktype.removeItems = 5, 255, ---div---, 2 
+		
+		# doktype 3
+		url.disabled = 0
+		urltype.disabled = 0        
+		# doktype 4
+		shortcut.disabled = 0
+		shortcut_mode.disabled = 0          
+		# doktype 7
+		mount_pid.disabled = 0
+		mount_pid_ol.disabled = 0
+		
+		hidden.disabled = 0
+		starttime.disabled = 0
+		endtime.disabled = 0
+		alias.disabled = 1
+		
+		TSconfig.disabled = 0
+		storage_pid.disabled = 0
+		is_siteroot.disabled = 0
+		php_tree_stop.disabled = 1
+		tx_impexp_origuid.disabled = 0
+		editlock.disabled = 1
+		                          
+		no_search.disabled = 1
+		no_cache.disabled = 0 
+		cache_timeout.disabled = 1  
+		
+		fe_group.disabled = 1
+		target.disabled = 0
+		media.disabled = 0         
+		newUntil.disabled = 1 
+		lastUpdated.disabled = 1        
+		
+		keywords.disabled = 0
+		description.disabled = 0    
+		abstract.disabled = 1
+		author.disabled = 0  
+		author_email.disabled = 0
+						
+		module.disabled = 0
+		content_from_pid.disabled = 0
+
+		imagefiles.disabled = 1
+		
+		fe_login_mode.disabled = 1
+		tx_templavoila_ds.disabled = 1
+		tx_templavoila_to.disabled = 1
+		tx_templavoila_next_ds.disabled = 1
+		tx_templavoila_next_to.disabled = 1
+		tx_templavoila_flex.disabled = 1
+		tx_cssselect_stylesheets.disabled = 1
+		tx_realurl_pathsegment.disabled = 0
+		tx_realurl_exclude.disabled = 1
+		extendToSubpages.disabled = 1
+		l18n_cfg.disabled = 1
+	}
+	
 	tt_content {
+		#Content Element
+		starttime.disabled = 0
+		endtime.disabled = 0
+		fe_group.disabled = 1
+		CType.disabled = 0
+		#CType.removeItems = header, text, textpic, image, bullets, table, uploads, multimedia, mailform, search, login, splash, menu, shortcut, script, div, html, list,  
+		CType.removeItems =  header, text, image, bullets, table, multimedia, search, login, splash, div,
+		hidden.disabled = 0
+		date.disabled = 1
+		linkToTop.disabled = 1
+		section_frame.disabled = 1
+		colPos.disabled = 0
+		spaceBefore.disabled = 1
+		spaceAfter.disabled = 1
+		sys_language_uid.disabled = 0
+		sectionIndex.disabled = 1
+		
+		#Header
+		header.disabled = 0
+		header_link.disabled = 1
+		subheader.disabled = 1
+		header_layout.disabled = 0
+		
+		header_layout.removeItems = 0,1,5
+		header_layout.altLabels.2 = Normal title
+		header_layout.altLabels.3 = Small title
+		header_layout.altLabels.4 = Very small title
+		header_layout.altLabels.100 = Title hidden
+		
+		header_position.disabled = 1
+		
+		#Text
+		text_align.disabled = 1
+		text_face.disabled = 1
+		text_size.disabled = 1
+		text_color.disabled = 1
+		text_properties.disabled = 1
+		rte_enabled.disabled = 1
+		bodytext.disabled = 0
+		
+		#Image        
+		image.disabled = 1
+		imagewidth.disabled = 0
+		imageheight.disabled = 0
+		imageorient.disabled = 0
 		#imageorient.removeItems = 
 			#0 = Above, center 
 			#1 = Above, right 
@@ -85,7 +191,47 @@ page.TCEFORM {
 			#26 = In text, left (nowrap) 
 		
 		#imageorient.removeItems = 0,1,2,8,9,10,17,18,25,26
-		#imageorient.removeItems = 8,9,10,25,26
-		imageorient = 2	
+		imageorient.removeItems = 1,8,9,18
+		
+		imagecaption_position.disabled = 1
+		image_link.disabled = 0
+		image_zoom.disabled = 0
+		image_noRows.disabled = 1
+		image_effects.disabled = 1
+		image_compression.disabled = 1
+ 
+		imagecaption.disabled = 0
+		imagecols.disabled = 0
+		imageborder.disabled = 1
+		altText.disabled = 1
+		titleText.disabled = 1
+		image_frames.disabled = 1
+		media.disabled = 0
+		multimedia.disabled = 0
+		longdescURL.disabled = 1
+		
+		#Links
+		filelink_size.disabled = 0§
+		
+		#Table
+		table_border.disabled = 1
+		table_cellspacing.disabled = 1
+		table_cellpadding.disabled = 1
+		table_bgColor.disabled = 1
+		layout.disabled = 0
+		layout.removeItems = 2,3
+		layout.altLabels.1 = Well
+		
+		layout.altLabels.100 = Title hidden
+		cols.disabled = 1
+		
+		#Sonstiges
+		pages.disabled = 0
+		menu_type.disabled = 0
+		list_type.disabled = 0
+		records.disabled = 0
+		recursive.disabled = 0
+		select_key.disabled = 1
+		splash_layout.disabled = 0
 	}
 }

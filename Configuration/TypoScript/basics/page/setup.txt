@@ -7,17 +7,21 @@ page {
 	headTag = <head><meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; chrome=1">
 	
 	headerData {
+		10 = COA
 		10 < basics.js.headerData
+		
+		20 = COA
 		20 < basics.headerData.title
+		
 		30 = TEXT
 		30.value = <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	}
 	
 	includeCSS < basics.css.includeCSS
 
-	includeJSFooterlibs < basics.js.jsFooterInline
-	jsFooterInline < basics.js.jsFooterInline
+	includeJSFooterlibs < basics.js.includeJSFooterlibs
 	includeJSFooter < basics.js.includeJSFooter
+	jsFooterInline < basics.js.jsFooterInline
 	
 	10 < basics.templates
 }

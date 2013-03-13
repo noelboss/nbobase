@@ -29,6 +29,16 @@
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
+		<part>
+			<parameter>tx_nxnews_display[year]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nxnews_display[news]</parameter>
+			<lookindb>
+				<to>SELECT title FROM tx_nxnews_domain_model_news WHERE uid=$1</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
 	</uriparts>
 	<predefinedparts>
 		<part>
@@ -42,6 +52,12 @@
 		</part>
 		<part>
 			<parameter>tx_nbogallery_gallery[controller]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nxnews_display[action]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nxnews_display[controller]</parameter>
 		</part>
 	</predefinedparts>
 	<valuemaps>

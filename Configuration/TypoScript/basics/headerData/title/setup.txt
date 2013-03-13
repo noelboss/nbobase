@@ -4,22 +4,22 @@ basics.headerData.title {
 
 	# Startpage
 	10 = TEXT
-	10.data = levelfield:0, title
+	10.data = levelfield:0, subtitle
 
 	# Subpage
 	20 = TEXT
 	20 {
-		field = subtitle//title
+		field = subtitle
+		override.field = title
 		noTrimWrap =| – ||
 	}
-
+	
 	# Subpage
 	30 = TEXT
 	30 {
+		field = subtitle
 		noTrimWrap =| – ||
-		data = GP:tx_nboevents_events|course
-		wrap = {DB:tx_nboevents_domain_model_course:|:title}  
-		insertData = 1
 		required = 1
 	}
+
 }

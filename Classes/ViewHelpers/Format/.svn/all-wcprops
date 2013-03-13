@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/avaloq/avaloq-relaunch-2011/!svn/ver/1244/trunk/typo3/typo3conf/ext/nxbase/Classes/ViewHelpers/Format
+END
+StrftimeViewHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/avaloq/avaloq-relaunch-2011/!svn/ver/1244/trunk/typo3/typo3conf/ext/nxbase/Classes/ViewHelpers/Format/StrftimeViewHelper.php
+END

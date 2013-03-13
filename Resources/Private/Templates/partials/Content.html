@@ -1,19 +1,57 @@
-	<div class="container-subnav">
-		<div class="container">
-			<f:cObject typoscriptObjectPath="library.NavMainContent" />
-		</div>
+<div class="container-subnav">
+	<div class="container">
+		<f:cObject typoscriptObjectPath="library.NavMainContent" />
 	</div>
-	<section>
-		<div class="container">
-			<div class="page-header">
-				<div class="pull-right"><f:cObject typoscriptObjectPath="library.NavLanguage" /></div>
-				<h1><f:cObject typoscriptObjectPath="library.Title" /> <small><f:cObject typoscriptObjectPath="library.Title.Sub" /></small></h1>
-			</div>
-			<div class="row-fluid">
+</div>
+<section>
+	<div class="container">
+		<div class="page-header">
+			<div class="pull-right"><f:cObject typoscriptObjectPath="library.NavLanguage" /></div>
+			<h1><f:cObject typoscriptObjectPath="library.Title" /> <small><f:cObject typoscriptObjectPath="library.Title.Sub" /></small></h1>
+		</div>
+		<div class="row-fluid">
+			<f:if condition="{template} == 8">
+				<div class="span8">
+					<f:cObject typoscriptObjectPath="library.Content.c0" />
+					<f:cObject typoscriptObjectPath="library.JobsBackLink" />
+				</div>
+				<div class="span4">
+					<f:cObject typoscriptObjectPath="library.JobsForm" />
+				</div>
+			</f:if>
+			<f:if condition="{template} == 6">
+				<div class="span3">
+					<f:cObject typoscriptObjectPath="library.Content.c3" />
+				</div>
+				<div class="span5">
+					<f:cObject typoscriptObjectPath="library.Content.c0" />
+				</div>
+				<div class="span4">
+					<f:cObject typoscriptObjectPath="library.Content.c4" />
+				</div>
+			</f:if>
+			<f:if condition="{template} == 5">
+				<div class="span3">
+					<f:cObject typoscriptObjectPath="library.Content.c3" />
+				</div>
+				<div class="span9">
+					<f:cObject typoscriptObjectPath="library.Content.c0" />
+				</div>
+			</f:if>
+			<f:if condition="{template} == 4">
+				<div class="span8">
+					<f:cObject typoscriptObjectPath="library.Content.c0" />
+				</div>
+				<div class="span4">
+					<f:cObject typoscriptObjectPath="library.Content.c3" />
+				</div>
+			</f:if>
+			<f:if condition="{template} == 2">
 				<div class="span12">
 					<f:cObject typoscriptObjectPath="library.Content.c0" />
 				</div>
-			</div>
+			</f:if>
 		</div>
-		<f:render partial="Footer" />
-	</section>
+	</div>
+	<f:render partial="Footer" />
+</section>

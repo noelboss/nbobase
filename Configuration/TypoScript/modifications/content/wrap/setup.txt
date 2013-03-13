@@ -6,3 +6,29 @@ tt_content.stdWrap.innerWrap.cObject.default >
 tt_content.stdWrap.prepend > 
 tt_content.stdWrap.dataWrap >
 
+tt_content.menu.20.1 {
+	stdWrap.outerWrap = <div class="well"><ul class="nav nav-list">|</ul></div>
+	1 {
+		SPC = 1
+		SPC {
+			stdWrap.cObject = TEXT
+			stdWrap.cObject {
+				field = title
+				wrap = <li class="nav-header">|</li><li class="divider"></li>
+			}
+		}
+		ACT >
+	}
+	2 >
+}
+
+tt_content.menu.20.8 {
+	1.wrap = <ul class="nav nav-tabs nav-stacked">|</ul>
+	2 >
+}
+
+tt_content.menu.20.default {
+	stdWrap.outerWrap = <ul class="nav nav-tabs nav-stacked">|</ul>
+	2 >
+}
+
