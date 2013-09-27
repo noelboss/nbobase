@@ -62,6 +62,7 @@
 	$TYPO3_CONF_VARS['SYS']['systemLog'] = '1';
 	$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = '1';
 	$TYPO3_CONF_VARS['SYS']['enable_DLOG'] = '1';
+	$TYPO3_CONF_VARS['SYS']['curlUse'] = '1';
 	
 	$TYPO3_CONF_VARS['BE']['compressionLevel'] = '4';
 	$TYPO3_CONF_VARS['FE']['compressionLevel'] = '6';
@@ -75,9 +76,7 @@
 		
 		$TYPO3_CONF_VARS['BE']['loginSecurityLevel'] = 'superchallenged';
 		$TYPO3_CONF_VARS['EXT']['allowLocalInstall'] = '1';
-	
-		$TYPO3_CONF_VARS['GFX']['im_path'] = '/opt/local/bin/';	
-		$TYPO3_CONF_VARS['GFX']['im_path_lzw'] = '/opt/local/bin/';
+
 		$TYPO3_CONF_VARS['GFX']['im_combine_filename'] = 'composite';
 		$TYPO3_CONF_VARS['GFX']['im_version_5'] = 'im6';
 		
