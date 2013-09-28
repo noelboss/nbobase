@@ -28,20 +28,21 @@ setup.override {
 }
 
 options {         
-	RTESmallWidth = 98&%
-	RTESmallHeight = 500
-	RTELargeWidthIncrement = 0
+	rteWidth = 98%
+	rteHeight = 500
 	
 	# disable warning by typeChange and copy/move/paste
 	# options.alertPopups = 255 - 1 -2 = 252
 	alertPopups = 252
+	
 	# Enable Cache Options for Authors
   	clearCache {
 		all = 0
   		pages = 1 
 	}
+	
   	# shortcut frame for each BE-user
-  	shortcutFrame = 0
+  	shortcutFrame = 1
   	shortcut_onEditId_keepExistingExpanded = 0
 	# Adds a "Save and New" Icon to the toolbar
 	saveDocNew = 0 
@@ -68,8 +69,25 @@ options {
 	file_list.enableDisplayThumbnails = 1
 }
 
+TCAdefaults {
+	tt_content{
+		CType = textpic
+		imageorient = 17
+	}
+}
+
 page.TCEFORM {
 	tt_content {
+		#CType.removeItems = header, text, textpic, image, bullets, table, uploads, multimedia, mailform, search, login, splash, menu, shortcut, script, div, html, list,  
+		CType.removeItems =  header, text, image, bullets, table, multimedia, search, login, splash, div, html, mailform, fed_fce
+		
+		header_layout.removeItems = 0,1,5
+		header_layout.altLabels.2 = Normal title
+		header_layout.altLabels.3 = Small title
+		header_layout.altLabels.4 = Very small title
+		header_layout.altLabels.100 = Title hidden
+		
+
 		#imageorient.removeItems = 
 			#0 = Above, center 
 			#1 = Above, right 
@@ -84,6 +102,5 @@ page.TCEFORM {
 		
 		#imageorient.removeItems = 0,1,2,8,9,10,17,18,25,26
 		imageorient.removeItems = 8,9,10,25,26
-		imageorient = 2	
 	}
 }

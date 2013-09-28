@@ -36,11 +36,13 @@ basics.js {
 	}
 
 	includeJSFooterlibs {
-		10_jquery 		=	EXT:nbobase/Resources/Public/js/jquery.min.js
-		20_bootstrap 	=	EXT:nbobase/Resources/Public/js/bootstrap.min.js
+		nbobase_jquery 			=	EXT:nbobase/Resources/Public/js/jquery.min.js
+		nbobase_jquerymigrate 	=	EXT:nbobase/Resources/Public/js/jquery-migrate-1.1.1.min.js
+		nbobase_bootstrap 		=	EXT:nbobase/Resources/Public/js/bootstrap.min.js
+		nbobase_jqueryUi 		=	EXT:nbobase/Resources/Public/js/jquery-ui-1.10.1.custom.min.js
 	}
 	includeJSFooter {
-		nbobase = 			EXT:nbobase/Resources/Public/js/application.js
+		nbobase 			=	EXT:nbobase/Resources/Public/js/application.js
 	}
 }
 

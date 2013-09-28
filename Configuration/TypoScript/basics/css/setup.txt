@@ -1,7 +1,7 @@
 basics.css {
 	includeCSS {
-		fonts = 		EXT:nbobase/Resources/Public/fonts/fonts.css
-		bootstrap20 = 	EXT:nbobase/Resources/Public/css/bootstrap/bootstrap.min.css
-		nbobase = 		EXT:nbobase/Resources/Public/css/application.css
+		#nbobase_fonts = 		EXT:nbobase/Resources/Public/fonts/fonts.css
+		nbobase_bootstrap	= 	EXT:nbobase/Resources/Public/css/bootstrap/bootstrap.min.css
+		nbobase_nbobase = 		EXT:nbobase/Resources/Public/css/application.css
 	}
 }

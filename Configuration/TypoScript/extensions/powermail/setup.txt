@@ -1,1 +1,4 @@
-page.includeJSFooterlibs.powermailJQuery >
+page.includeJSFooterlibs {
+	powermailJQuery >
+	powermailJQueryUi >
+}

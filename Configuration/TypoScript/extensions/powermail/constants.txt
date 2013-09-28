@@ -1,6 +1,9 @@
 plugin.tx_powermail {
 	settings {
-		javascript.powermailJQuery = 
+		javascript {
+			powermailJQuery = 
+			powermailJQueryUi = 
+		}
 	}
 	view {
 		# cat=powermail_main/file; type=string; label= Path to template root (FE)

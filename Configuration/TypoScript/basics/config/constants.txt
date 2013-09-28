@@ -1,21 +1,29 @@
 # Define the Levels of your Website
 nbobase.entryLevel.0 = 1
 
-styles.content.imgtext {
-	colSpace = 20
-	rowSpace = 20
-	textMargin = 20
+styles.content {
+	imgtext {
+		colSpace = 20
+		rowSpace = 20
+		textMargin = 20
     
-	maxW = 940
-	maxWInText = 470
+		maxW = 1170
+		maxWInText = 384
     
-	borderSelector = div.csc-textpic-imagewrap.{$styles.content.imgtext.borderClass} img
-	borderClass = borderbox
+		borderSelector = div.csc-textpic-imagewrap.{$styles.content.imgtext.borderClass} img
+		borderClass = borderbox
 	
-	linkWrap.lightboxEnabled = 1
-	linkWrap.lightboxCssClass = fancybox thumbnail
-	linkWrap.width = 800
-}
+		linkWrap.lightboxEnabled = 1
+		linkWrap.lightboxCssClass = fancybox
+		# Click-enlarge Image Width
+		linkWrap.width = 1200
+	}
 
-# Standard-Überschriften als H4
-styles.content.defaultHeaderType = 4
+	media {
+		defaultVideoWidth = 770
+		defaultVideoHeight = 513
+		
+		defaultAudioWidth = 770
+		defaultAudioHeight = 30
+	}
+}

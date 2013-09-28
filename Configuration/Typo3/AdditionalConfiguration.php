@@ -1,26 +1,35 @@
-<?php        
+<?php
+	if($_SERVER['ENVIRONMENT'] == 'local'){
+		$GLOBALS['TYPO3_CONF_VARS']['DB'] = array(
+			'username' => 't3_casaes',
+			'password' => '8cvb073!db',
+			'database' => 't3_casaes',
+			'host' => 'localhost',
+		);
+	} else {
+		$GLOBALS['TYPO3_CONF_VARS']['DB'] = array(
+			'username' => 'web99',
+			'password' => 'QNHePPmf',
+			'database' => 'usr_web99_7',
+			'host' => 'localhost',
+		);
+	}
 	
-	$GLOBALS['TYPO3_CONF_VARS']['DB'] = array(
-		'database' => 't3_casaes',
-		'extTablesDefinitionScript' => 'extTables.php',
-		'host' => 'localhost',
-		'password' => '8cvb073!db',
-		'username' => 't3_casaes',
-	);
-
+	$GLOBALS['TYPO3_CONF_VARS']['DB']['extTablesDefinitionScript'] = 'extTables.php';
+	
 	
 	$GLOBALS['TYPO3_CONF_VARS']['BE']['fileadminDir'] = 'assets/';
 	$GLOBALS['TYPO3_CONF_VARS']['BE']['staticFileEditPath'] = 'static/';
-	//$GLOBALS['TYPO3_CONF_VARS']['BE']['compressionLevel'] = '4';
+	$GLOBALS['TYPO3_CONF_VARS']['BE']['compressionLevel'] = '6';
 	$GLOBALS['TYPO3_CONF_VARS']['BE']['lockRootPath'] = $_SERVER['DOCUMENT_ROOT'];
 	$GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] =	$_SERVER['T3_WARNINGEMAILADDR'] ? $_SERVER['T3_WARNINGEMAILADDR'] : 'n.company@me.com';
-	//$GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename'] = '1';
+	$GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename'] = '1';
 	$GLOBALS['TYPO3_CONF_VARS']['BE']['allowDonateWindow'] = '0';
-	$GLOBALS['TYPO3_CONF_VARS']['BE']['explicitADmode'] = '';
+	$GLOBALS['TYPO3_CONF_VARS']['BE']['explicitADmode'] = 'explicitDeny';
 	
 
 	$GLOBALS['TYPO3_CONF_VARS']['FE']['additionalAbsRefPrefixDirectories'] = 'assets/,';
-	//$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = '6';
+	$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = '6';
 
 	// Backend IP Restrictions and Warnings
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = $_SERVER['T3_DEVIPMASK'] ? $_SERVER['T3_DEVIPMASK'] : '127.0.0.1, 195.141.221.1, 192.168.0.*, 10.*'; // IP Mask for Backend
@@ -59,5 +68,4 @@
 	$GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['cooluri'] = 'a:3:{s:6:"LANGID";s:1:"L";s:7:"XMLPATH";s:44:"typo3conf/ext/nbobase/Configuration/Cooluri/";s:11:"MULTIDOMAIN";s:1:"0";}';
 	$GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rsaauth'] = 'a:1:{s:18:"temporaryDirectory";s:18:"/home/mondialw/tmp";}';
 	$GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['saltedpasswords'] = 'a:2:{s:3:"FE.";a:2:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:28:"tx_saltedpasswords_salts_md5";}s:3:"BE.";a:2:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:28:"tx_saltedpasswords_salts_md5";}}';
-
 ?>
