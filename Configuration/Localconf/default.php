@@ -53,7 +53,7 @@
 	// Backend IP Restrictions and Warnings
 	$TYPO3_CONF_VARS['SYS']['devIPmask'] = $_SERVER['T3_DEVIPMASK'] ? $_SERVER['T3_DEVIPMASK'] : '127.0.0.1, 195.141.221.1, 192.168.0.*, 10.*'; // IP Mask for Backend
 	//$TYPO3_CONF_VARS['BE']['IPmaskList'] =	$_SERVER['T3_IPMASKLIST'] ? $_SERVER['T3_IPMASKLIST'] : '127.0.0.1, 195.141.221.1, 192.168.0.*, 10.*, 172.29.2.*'; // IP Mask for Backend
-	$TYPO3_CONF_VARS['BE']['warning_email_addr'] =	$_SERVER['T3_WARNINGEMAILADDR'] ? $_SERVER['T3_WARNINGEMAILADDR'] : 'n.company@me.com';
+	$TYPO3_CONF_VARS['BE']['warning_email_addr'] =	$_SERVER['T3_WARNINGEMAILADDR'] ? $_SERVER['T3_WARNINGEMAILADDR'] : 'spam@noelboss.com';
 
 	// Display errors only if client matches [SYS][devIPmask].
 	// If devIPmask matches the users IP address the configured "debugExceptionHandler" is
