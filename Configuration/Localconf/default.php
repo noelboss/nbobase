@@ -58,11 +58,11 @@
 	// Display errors only if client matches [SYS][devIPmask].
 	// If devIPmask matches the users IP address the configured "debugExceptionHandler" is
 	// used for exceptions, if not "productionExceptionHandler" will be used
-	$TYPO3_CONF_VARS['SYS']['displayErrors'] = '2';
-	$TYPO3_CONF_VARS['SYS']['systemLog'] = '1';
-	$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = '1';
-	$TYPO3_CONF_VARS['SYS']['enable_DLOG'] = '1';
 	$TYPO3_CONF_VARS['SYS']['curlUse'] = '1';
+	$TYPO3_CONF_VARS['SYS']['displayErrors'] = '2';
+	$TYPO3_CONF_VARS['SYS']['systemLog'] = '0';
+	$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = '0';
+	$TYPO3_CONF_VARS['SYS']['enable_DLOG'] = '0';
 
 	$TYPO3_CONF_VARS['BE']['compressionLevel'] = '4';
 	$TYPO3_CONF_VARS['FE']['compressionLevel'] = '6';
