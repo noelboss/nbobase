@@ -1,5 +1,5 @@
 /*
- * © 2012 by Noël Bossart – sagenja.ch
+ * © 2012 by Noël Bossart – noelboss.ch
  */
 ;
 (function($){

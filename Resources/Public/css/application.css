@@ -42,6 +42,12 @@
 		filter: dropshadow(color=#000000, offx=0, offy=0);
 	}
 	
+	.contentHeader {
+		display: block;
+		height: 220px;
+		margin-bottom: 20px;
+	}
+	
 	.hero-unit	{
 		padding: 140px 60px 60px;
 	}
@@ -63,10 +69,6 @@
 
 	.containerOuter {
 		padding-top: 2.5em;
-	}
-	
-	.contentHeader {
-		display: none;
 	}
 
 	.containerWrapper {
@@ -337,15 +339,14 @@
 		-moz-box-shadow: none;
 		box-shadow: none;
 	}
+	
+	.formError {
+		color: #b94a48;
+	}
 }
 @media (min-width: 979px) { 
 	body {
 		background: #eee;
-	}
-	.contentHeader {
-		display: block;
-		height: 220px;
-		margin-bottom: 20px;
 	}
 	.containerOuter {
 		width: 980px;

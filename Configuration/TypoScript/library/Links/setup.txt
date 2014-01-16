@@ -17,11 +17,3 @@ library.Links {
 		}
 	}
 }
-
-[globalVar = TSFE:page|url_scheme = 2]
-Library.Links.Home {
-	typolink{
-		forceAbsoluteUrl.scheme = https
-	}
-}
-[global]

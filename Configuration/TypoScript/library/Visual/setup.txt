@@ -28,6 +28,6 @@ library.VisualNo {
 	if.isFalse.data = levelmedia: -1, "slide"
 }
 
-library.VisualContant < library.Visual
-library.VisualContant.stdWrap.outerWrap = <div class="contentHeader" |></div>
-library.VisualContant.10.file.height = 300c
+library.VisualContent < library.Visual
+library.VisualContent.stdWrap.noTrimWrap = |<div class="contentHeader" |></div>|
+library.VisualContent.10.file.height = 300c

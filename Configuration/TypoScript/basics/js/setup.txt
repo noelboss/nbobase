@@ -18,10 +18,8 @@ basics.js {
 		78945613211.insertData = 1
 		78945613211.value (
 			var _gaq = _gaq || [];
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', '{$library.analyticsCode}']);
-			_gaq.push(['_setDomainName', '{getenv:SERVER_NAME}']);
-			//_gaq.push(['_setAllowLinker', true]);
+			_gaq.push(['_setAccount', 'UA-39464018-1']);
+			_gaq.push(['_setDomainName', 'bissfest.ch']);
 			_gaq.push(['_trackPageview']);
 		)
 		78945613212 = TEXT
@@ -35,7 +33,9 @@ basics.js {
 	}
 
 	includeJSFooterlibs {
-		jq171 = 			EXT:nbobase/Resources/Public/js/jquery-1.7.1.min.js
+		jquery 			=	EXT:nbobase/Resources/Public/js/jquery.min.js
+		jquerymigrate 	=	EXT:nbobase/Resources/Public/js/jquery-migrate-1.1.1.min.js
+		jqueryUi 		=	EXT:nbobase/Resources/Public/js/jquery-ui-1.10.1.custom.min.js
 		fancybox = 			EXT:nbobase/Resources/Public/js/jquery.fancybox.pack.js
 		bcollapse =			EXT:nbobase/Resources/Public/js/bootstrap-collapse.js
 	}
@@ -43,7 +43,3 @@ basics.js {
 		nbobase = 			EXT:nbobase/Resources/Public/js/application.js
 	}
 }
-
-[globalVar = TSFE : beUserLogin > 0]
-	basics.js.jsFooterInline >
-[end]

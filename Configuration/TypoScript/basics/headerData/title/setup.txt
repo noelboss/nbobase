@@ -10,13 +10,13 @@ basics.headerData.title {
 	20 = TEXT
 	20 {
 		field = subtitle//title
-		noTrimWrap =| – ||
+		VisualContantWrap =| – ||
 	}
 
 	# Subpage
 	30 = TEXT
 	30 {
-		noTrimWrap =| – ||
+		VisualContantWrap =| – ||
 		data = GP:tx_nboevents_events|course
 		wrap = {DB:tx_nboevents_domain_model_course:|:title}  
 		insertData = 1

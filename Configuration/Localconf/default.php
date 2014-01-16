@@ -58,32 +58,34 @@
 	// Display errors only if client matches [SYS][devIPmask]. 
 	// If devIPmask matches the users IP address the configured "debugExceptionHandler" is 
 	// used for exceptions, if not "productionExceptionHandler" will be used
-	$TYPO3_CONF_VARS['SYS']['displayErrors'] = '2'; 
-	$TYPO3_CONF_VARS['SYS']['systemLog'] = '1';
-	$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = '1';
-	$TYPO3_CONF_VARS['SYS']['enable_DLOG'] = '1';
 	
 	$TYPO3_CONF_VARS['BE']['compressionLevel'] = '4';
 	$TYPO3_CONF_VARS['FE']['compressionLevel'] = '6';
-	
 	$TYPO3_CONF_VARS['BE']['loginSecurityLevel'] = 'normal';
 	
+
+	$TYPO3_CONF_VARS['SYS']['displayErrors'] = '0'; 
+	$TYPO3_CONF_VARS['SYS']['systemLog'] = '0';
+	$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = '';
+	$TYPO3_CONF_VARS['SYS']['enable_DLOG'] = '0';
+
 	if($_SERVER['ENVIRONMENT'] == 'local'){
+		$TYPO3_CONF_VARS['SYS']['displayErrors'] = '2'; 
 		$TYPO3_CONF_VARS['SYS']['systemLog'] = '1';
-		$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = '1';
+		$TYPO3_CONF_VARS['SYS']['enableDeprecationLog'] = 'file';
 		$TYPO3_CONF_VARS['SYS']['enable_DLOG'] = '1';
-		
+
 		$TYPO3_CONF_VARS['EXT']['allowLocalInstall'] = '1';
-	
+
 		$TYPO3_CONF_VARS['GFX']['im_path'] = '/usr/local/bin/';	
 		$TYPO3_CONF_VARS['GFX']['im_path_lzw'] = '/usr/local/bin/';
 		$TYPO3_CONF_VARS['GFX']['im_combine_filename'] = 'composite';
 		$TYPO3_CONF_VARS['GFX']['im_version_5'] = 'im6';
-		
+
 		$TYPO3_CONF_VARS['BE']['compressionLevel'] = '';
 		$TYPO3_CONF_VARS['FE']['compressionLevel'] = '';
 	}
-
+	
 	// New Fileadmin
 	$TYPO3_CONF_VARS['BE']['fileadminDir'] = 'assets/';
 	$TYPO3_CONF_VARS['BE']['staticFileEditPath'] = 'assets/static/';
@@ -129,7 +131,7 @@
 	$TYPO3_CONF_VARS['EXT']['extConf']['em'] = 'a:1:{s:17:"selectedLanguages";s:2:"de";}';	//  Modified or inserted by TYPO3 Extension Manager.
 	$TYPO3_CONF_VARS['EXT']['extConf']['dce'] = 'a:2:{s:7:"DEVMODE";s:1:"1";s:16:"ENABLECODEMIRROR";s:1:"1";}';	// Modified or inserted by TYPO3 Extension Manager. 
 	$TYPO3_CONF_VARS['EXT']['extConf']['extension_builder'] = 'a:3:{s:15:"enableRoundtrip";s:1:"1";s:15:"backupExtension";s:1:"1";s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";}';	//  Modified or inserted by TYPO3 Extension Manager.
-	$TYPO3_CONF_VARS['EXT']['extConf']['cooluri'] = 'a:3:{s:6:"LANGID";s:1:"L";s:7:"XMLPATH";s:44:"typo3conf/ext/nbobase/Configuration/Cooluri/";s:11:"MULTIDOMAIN";s:1:"1";}';	//  Modified or inserted by TYPO3 Extension Manager.
+	$TYPO3_CONF_VARS['EXT']['extConf']['cooluri'] = 'a:3:{s:6:"LANGID";s:1:"L";s:7:"XMLPATH";s:44:"typo3conf/ext/nbobase/Configuration/Cooluri/";s:11:"MULTIDOMAIN";s:1:"0";}';	//  Modified or inserted by TYPO3 Extension Manager.
 	$TYPO3_CONF_VARS['EXT']['extConf']['rsaauth'] = 'a:1:{s:18:"temporaryDirectory";s:18:"/home/mondialw/tmp";}';	// Modified or inserted by TYPO3 Extension Manager. 
 	$TYPO3_CONF_VARS['EXT']['extConf']['saltedpasswords'] = 'a:2:{s:3:"FE.";a:2:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:28:"tx_saltedpasswords_salts_md5";}s:3:"BE.";a:2:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:28:"tx_saltedpasswords_salts_md5";}}';	//  Modified or inserted by TYPO3 Extension Manager.	
 ?>

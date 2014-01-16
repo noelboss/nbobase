@@ -2,28 +2,16 @@
 # Language Configuration
 ###############################################
 config {
-	# Zeigt die seite mit Default Inhalt an, falls nicht übersetzt, Menus werden aber, sofern vorhanden in der richtigen Sprache angezeigt
-	sys_language_mode = content_fallback ; 0,1
-	#sys_language_mode = strict
+	sys_language_mode = strict
 
-	# Zeigt nicht übersetzte inhalte nicht an auf der Sprache
-	sys_language_overlay = hideNonTranslated
+	# Don't display non translated pages
+	sys_language_overlay = 0
+	
+	# Add L Parameter to URL
+	linkVars := addToList(L)
 
-	# This setting means that the header and image field of content elements will be used from the translation only if they had a non-blank value.
-
-	# Setting up the language variable "L" to be passed along with links
-	linkVars = L
-
-	# Add the variables that need to be appended for the language switch here
-	# linkVars := addToList(tx_indexedsearch)
-}
-
-# Default language, sys_language.uid = 0
-config {
 	sys_language_uid = 0
 	language = de
-	# Shows content in this lang if primary lang is not available:
-	language_alt = de
-	locale_all = de_CH.UTF-8
-	htmlTag_langKey = de
+	locale_all = de_DE
+	htmlTag_langKey = de-CH
 }

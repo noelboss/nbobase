@@ -27,12 +27,12 @@ config {
 	additionalHeaders 			= Content-Type:text/html;charset=utf-8
 	renderCharset				= utf-8
 	xhtml_cleaning				= 1
-	spamProtectEmailAddresses = 2 
+	spamProtectEmailAddresses   = 2 
 	spamProtectEmailAddresses_atSubst = (at)
 	headerComment 				=
 	enableContentLengthHeader	= 1
 	notification_email_encoding = utf-8
-	notification_email_charset 	= utf-8
+	notification_email_charset  = utf-8
 	admPanel				 	= 1
 
 	#// Removes the <?xml ...> tag, also because of IE Bug
@@ -41,9 +41,6 @@ config {
 	# Page content is usually cached
 	# 14 Tage:
 	cache_period = 1209600
-
-	# Use simulateStaticDocuments instead of Real-URL
-	simulateStaticDocuments = 0
 
 	# Send cache headers with server
 	sendCacheHeaders = 1

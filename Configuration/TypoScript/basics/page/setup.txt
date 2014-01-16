@@ -4,13 +4,19 @@
 page = PAGE
 page {
 	typeNum = 0
-	headTag = <head><meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; chrome=1">
+	headTag = <head><meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; chrome=1"><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 	headerData {
 		10 < basics.js.headerData
 		20 < basics.headerData.title
 		30 = TEXT
-		30.value = <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		30.value (
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!--[if lt IE 7 ]>
+			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+			<script type="text/javascript">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+			<![endif]-->
+		)
 	}
 	
 	includeCSS < basics.css.includeCSS

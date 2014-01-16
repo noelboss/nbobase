@@ -1,0 +1,9 @@
+page{
+	includeJSFooterlibs {
+		powermailJQuery >
+		powermailJQueryUi >
+	}
+	includeJSFooter {
+		powermailForm = EXT:nbobase/Resources/Public/js/powermail_form.js
+	}
+}
