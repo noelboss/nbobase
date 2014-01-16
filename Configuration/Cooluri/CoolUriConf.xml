@@ -32,15 +32,14 @@
 		<part>
 			<parameter>tx_nboevents_events[course]</parameter>
 			<lookindb>
-				SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nboevents_domain_model_course as tt1, (SELECT COUNT(*) AS number FROM tx_nboevents_domain_model_course WHERE title=(SELECT title FROM tx_nboevents_domain_model_course WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1
-				<to>SELECT CONCAT(title,CONCAT('-',type)) FROM tx_nboevents_domain_model_course WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nboevents_domain_model_course as tt1, (SELECT COUNT(*) AS number FROM tx_nboevents_domain_model_course WHERE title=(SELECT title FROM tx_nboevents_domain_model_course WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
 			<parameter>tx_nboevents_events[event]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT CONCAT(c.title,'-',e.uid) FROM tx_nboevents_domain_model_course AS c, tx_nboevents_domain_model_event AS e WHERE e.course = c.uid AND e.deleted=0 AND e.hidden = 0 AND e.uid=$1</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -89,6 +88,11 @@
 			<parameter>L</parameter>
 			<value key="">0</value>
 			<value key="en">1</value>
+		</valuemap>
+		<valuemap>
+			<parameter>type</parameter>
+			<value key="">0</value>
+			<value key="lightbox">99</value>
 		</valuemap>
 		<valuemap>
 			<parameter>tx_nboevents_events[controller]</parameter>
