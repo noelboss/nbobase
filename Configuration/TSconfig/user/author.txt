@@ -1,19 +1,19 @@
-admPanel { 
+admPanel {
 	enable{
 		edit = 0
-		preview = 1 
+		preview = 1
 	}
 
 	module {
-		edit.forceDisplayIcons = 0 
-		edit.forceDisplayFieldIcons = 0 
-		preview = 1 
+		edit.forceDisplayIcons = 0
+		edit.forceDisplayFieldIcons = 0
+		preview = 1
 	}
 
 	override {
-		preview.showHiddenPages = 0 
-		preview.showHiddenRecords = 0 
-		edit.displayFieldIcons = 0 
+		preview.showHiddenPages = 0
+		preview.showHiddenRecords = 0
+		edit.displayFieldIcons = 0
 		edit.displayIcons = 0
 		# disable TypoScript Cache
 		tsdebug.forceTemplateParsing = 1
@@ -27,63 +27,63 @@ setup.override {
 	thumbnailsByDefault =1
 }
 
-options {         
-	RTESmallWidth = 98&%
+options {
+	RTESmallWidth = 98%
 	RTESmallHeight = 500
 	RTELargeWidthIncrement = 0
-	
+
 	# disable warning by typeChange and copy/move/paste
 	# options.alertPopups = 255 - 1 -2 = 252
 	alertPopups = 252
 	# Enable Cache Options for Authors
   	clearCache {
 		all = 0
-  		pages = 1 
+  		pages = 1
 	}
   	# shortcut frame for each BE-user
   	shortcutFrame = 0
   	shortcut_onEditId_keepExistingExpanded = 0
 	# Adds a "Save and New" Icon to the toolbar
-	saveDocNew = 0 
+	saveDocNew = 0
 	saveDocView = 0
 	# Enable for individual Tables (Records)
   	# saveDocNew.[table] = 1
 	# Erstellen von Folders über das Upload Folder
   	createFoldersInEB = 1
-  	//modify context Menus          
-    # Shows the ID in front of the Page Title
+  	//modify context Menus
+	# Shows the ID in front of the Page Title
 	pageTree{
-		showPageIdWithTitle = 0      
+		showPageIdWithTitle = 0
 		disableIconLinkToContextmenu = 1
 	}
 
 	folderTree {
 		disableIconLinkToContextmenu = 1
-	}                
-	
+	}
+
   	# contextMenu.pageTree.disableItems = view, edit
 	contextMenu.pageTree.disableItems = info
-	
+
 	# No-brainer. Thumbnails make life easier.
 	file_list.enableDisplayThumbnails = 1
 }
 
 page.TCEFORM {
 	tt_content {
-		#imageorient.removeItems = 
-			#0 = Above, center 
-			#1 = Above, right 
-			#2 = Above, left 
-			#8 = Below, center 
-			#9 = Below, right 
-			#10 = Below, left 
-			#17 = In text, right 
-			#18 = In text, left 
-			#25 = In text, right (nowrap) 
-			#26 = In text, left (nowrap) 
-		
+		#imageorient.removeItems =
+			#0 = Above, center
+			#1 = Above, right
+			#2 = Above, left
+			#8 = Below, center
+			#9 = Below, right
+			#10 = Below, left
+			#17 = In text, right
+			#18 = In text, left
+			#25 = In text, right (nowrap)
+			#26 = In text, left (nowrap)
+
 		#imageorient.removeItems = 0,1,2,8,9,10,17,18,25,26
 		imageorient.removeItems = 8,9,10,25,26
-		imageorient = 2	
+		imageorient = 2
 	}
 }
