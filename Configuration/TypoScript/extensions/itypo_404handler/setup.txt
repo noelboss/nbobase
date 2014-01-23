@@ -1,4 +1,4 @@
 # config for 404 errors
 plugin.itypo_404handler.loginPage = 0
-plugin.itypo_404handler.forbiddenPage = 49
-plugin.itypo_404handler.notfoundPage = 49
+plugin.itypo_404handler.forbiddenPage = 108
+plugin.itypo_404handler.notfoundPage = 108
