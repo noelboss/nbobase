@@ -28,9 +28,9 @@ setup.override {
 }
 
 options {
-	#RTESmallWidth = 98%
-	#RTESmallHeight = 500
-	#RTELargeWidthIncrement =
+	RTESmallWidth = 98%
+	RTESmallHeight = 500
+	RTELargeWidthIncrement =
 
 	# disable warning by typeChange and copy/move/paste
 	# options.alertPopups = 255 - 1 -2 = 252
