@@ -41,11 +41,13 @@ options {
 	# disable warning by typeChange and copy/move/paste
 	# options.alertPopups = 255 - 1 -2 = 252
 	alertPopups = 252
+
 	# Enable Cache Options for Authors
 	clearCache {
 		all = 0
 		pages = 1
 	}
+
 	# shortcut frame for each BE-user
 	shortcutFrame = 1
 	shortcut_onEditId_keepExistingExpanded = 0
@@ -58,10 +60,10 @@ options {
 	# saveDocNew.[table] = 1
 	# Erstellen von Folders über das Upload Folder
 	createFoldersInEB = 1
-	//modify context Menus
+
 	# Shows the ID in front of the Page Title
 	pageTree{
-		showPageIdWithTitle = 0
+		showPageIdWithTitle = 1
 		disableIconLinkToContextmenu = 1
 	}
 
@@ -71,9 +73,6 @@ options {
 
 	# contextMenu.pageTree.disableItems = view, edit
 	contextMenu.pageTree.disableItems = info
-
-	# No-brainer. Thumbnails make life easier.
-	file_list.enableDisplayThumbnails = 1
 }
 
 page.TCEFORM {
