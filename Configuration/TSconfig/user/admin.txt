@@ -22,10 +22,16 @@ admPanel {
 	hide = 1
 }
 
-setup.override {
-	edit_wideDocument = 1
-	edit_docModuleUpload = 0
-	thumbnailsByDefault =1
+setup {
+	override {
+		edit_wideDocument = 1
+		edit_docModuleUpload = 0
+		thumbnailsByDefault =1
+		extendedView = 1
+	}
+	default {
+		extendedView = 1
+	}
 }
 
 options {
