@@ -105,9 +105,7 @@ TCEFORM.pages {
 
 	title {
 		# The label for the "title" field will link itself
-		linkTitleToSelf = 1
-		# From the form with "title", return to full form:
-		linkTitleToSelf.returnUrl = 1
+		linkTitleToSelf = 0
 	}
 	doktype {
 		noMatchingValue_label = Wert "%s" ist ungültig
