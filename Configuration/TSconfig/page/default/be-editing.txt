@@ -93,16 +93,12 @@ TCEFORM.pages {
 	hidden.types.254.disabled = 1
 	starttime.types.254.disabled = 1
 	endtime.types.254.disabled = 1
-	subtitle.types.254.disabled = 1
+	subtitle.types.254.disabled = 0
 	nav_title.types.254.disabled = 1
 	nav_hide.types.254.disabled = 1
 	is_siteroot.types.254.disabled = 1
 	no_cache.types.254.disabled = 1
 	cache_timeout.types.254.disabled = 1
-	tx_templavoila_to.types.254.disabled = 1
-	tx_templavoila_next_ds.types.254.disabled = 1
-	tx_templavoila_next_to.types.254.disabled = 1
-	tx_templavoila_flex.types.254.disabled = 1
 	tx_realurl_pathsegment.types.254.disabled = 1
 	tx_https_is_https.types.254.disabled = 1
 

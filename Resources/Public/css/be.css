@@ -1,22 +1,25 @@
 #ext-cms-layout-db-layout-php .typo3-page-stdlist {
-	width: 100%;
+	width: auto;
+	display: block;
+	margin: 0 10px;
 }
 
-#typo3-docheader .t3-icon-document-new,
-#typo3-docheader .t3-icon-page-new,
+/*#typo3-docheader .t3-icon-document-new,*/
+#typo3-docheader .t3-icon-document-save-close,
 #typo3-docheader .t3-icon-document-view,
+/*#typo3-docheader .t3-icon-document-open,*/
+#typo3-docheader .t3-icon-view-go-up,
+#typo3-docheader .t3-icon-page-new,
 #typo3-docheader .t3-icon-page-open,
 #typo3-docheader .t3-icon-page-move,
 #typo3-docheader .t3-icon-document-history-open,
 #typo3-docheader .t3-icon-system-list-open,
+#typo3-docheader .t3-icon-system-cache-clear,
 
 #ext-cms-layout-db-layout-php .t3-icon-gridelements-copyfrompage,
-
-.t3-page-colHeader.t3-row-header .t3-icon-document-open,
 #typo3-docbody .t3-page-ce-icons-move,
-
 #typo3-alt-doc-php .t3-icon-actions-window,
-#typo3-alt-doc-php .t3-icon-document-save-view,
+/*#typo3-alt-doc-php .t3-icon-document-save-view,*/
 #typo3-alt-doc-php .t3-icon-document-save-new {
 	display: none;
 }
