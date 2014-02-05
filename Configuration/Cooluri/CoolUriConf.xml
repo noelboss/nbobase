@@ -72,8 +72,8 @@ FROM	tx_nbowishlist_domain_model_wish AS tt1,
 		FROM   tx_nbowishlist_domain_model_wish
 		WHERE  title = (SELECT title
 						FROM   tx_nbowishlist_domain_model_wish
-						WHERE  uid = 148)) AS tt2
-						WHERE  tt1.uid = 148
+						WHERE  uid = $1)) AS tt2
+						WHERE  tt1.uid = $1
 						AND tt1.deleted = 0
 						AND tt1.hidden = 0</to>
 				<t3conv>1</t3conv>
