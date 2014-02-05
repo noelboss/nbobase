@@ -65,7 +65,7 @@
 		<part>
 			<parameter>tx_nbowishlist_whishlist[wish]</parameter>
 			<lookindb>
-				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nbowishlist_domain_model_wish as tt1, (SELECT COUNT(*) AS number FROM tx_nbowishlist_domain_model_wish WHERE title=(SELECT title FROM tx_nbowishlist_domain_model_wish WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1 AND tt1.deleted=0 AND tt1.hidden=0</to>
+				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.uid),'')) FROM tx_nbowishlist_domain_model_wish as tt1, (SELECT COUNT(*) AS number FROM tx_nbowishlist_domain_model_wish WHERE title=(SELECT uid FROM tx_nbowishlist_domain_model_wish WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1 AND tt1.deleted=0 AND tt1.hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
