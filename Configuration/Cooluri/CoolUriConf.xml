@@ -25,36 +25,14 @@
 		<part>
 			<parameter>tx_nbogallery_gallery[gallery]</parameter>
 			<lookindb>
-				<to>
-					SELECT Concat(tt1.title, IF(tt2.number > 1, Concat('-', tt2.uid), ''))
-					FROM	tx_nbogallery_domain_model_gallery AS tt1,
-							(SELECT uid, Count(*) AS number
-							FROM   tx_nbogallery_domain_model_gallery
-							WHERE  title = (SELECT title
-											FROM   tx_nbogallery_domain_model_gallery
-											WHERE  uid = $1)) AS tt2
-											WHERE  tt1.uid = $1
-											AND tt1.deleted = 0
-											AND tt1.hidden = 0
-				</to>
+				<to>SELECT title FROM tx_nbogallery_domain_model_gallery WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
 			<parameter>tx_nboevents_events[course]</parameter>
 			<lookindb>
-				<to>
-					SELECT Concat(tt1.title, IF(tt2.number > 1, Concat('-', tt2.uid), ''))
-					FROM	tx_nboevents_domain_model_course AS tt1,
-							(SELECT uid, Count(*) AS number
-							FROM   tx_nboevents_domain_model_course
-							WHERE  title = (SELECT title
-											FROM   tx_nboevents_domain_model_course
-											WHERE  uid = $1)) AS tt2
-											WHERE  tt1.uid = $1
-											AND tt1.deleted = 0
-											AND tt1.hidden = 0
-				</to>
+				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nboevents_domain_model_course as tt1, (SELECT COUNT(*) AS number FROM tx_nboevents_domain_model_course WHERE title=(SELECT title FROM tx_nboevents_domain_model_course WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -74,18 +52,7 @@
 		<part>
 			<parameter>tx_nboevents_events[location]</parameter>
 			<lookindb>
-				<to>
-					SELECT Concat(tt1.title, IF(tt2.number > 1, Concat('-', tt2.uid), ''))
-					FROM	tx_nboevents_domain_model_location AS tt1,
-							(SELECT uid, Count(*) AS number
-							FROM   tx_nboevents_domain_model_location
-							WHERE  title = (SELECT title
-											FROM   tx_nboevents_domain_model_location
-											WHERE  uid = $1)) AS tt2
-											WHERE  tt1.uid = $1
-											AND tt1.deleted = 0
-											AND tt1.hidden = 0
-				</to>
+				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1 AND deleted=0 AND hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
