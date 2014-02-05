@@ -40,6 +40,70 @@
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
+
+		<part>
+			<parameter>tx_nboevents_courses[course]</parameter>
+			<lookindb>
+				<to>
+					SELECT Concat(tt1.title, IF(tt2.number > 1, Concat('-', tt2.uid), ''))
+					FROM	tx_nboevents_domain_model_course AS tt1,
+							(SELECT uid, Count(*) AS number
+							FROM   tx_nboevents_domain_model_course
+							WHERE  title = (SELECT title
+											FROM   tx_nboevents_domain_model_course
+											WHERE  uid = $1)) AS tt2
+											WHERE  tt1.uid = $1
+											AND tt1.deleted = 0
+											AND tt1.hidden = 0
+				</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[event]</parameter>
+			<lookindb>
+				<to>SELECT CONCAT(c.title,'-',e.uid) FROM tx_nboevents_domain_model_course AS c, tx_nboevents_domain_model_event AS e WHERE e.course = c.uid AND e.deleted=0 AND e.hidden = 0 AND e.uid=$1</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[controller]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[action]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[location]</parameter>
+			<lookindb>
+				<to>
+					SELECT Concat(tt1.title, IF(tt2.number > 1, Concat('-', tt2.uid), ''))
+					FROM	tx_nboevents_domain_model_location AS tt1,
+							(SELECT uid, Count(*) AS number
+							FROM   tx_nboevents_domain_model_location
+							WHERE  title = (SELECT title
+											FROM   tx_nboevents_domain_model_location
+											WHERE  uid = $1)) AS tt2
+											WHERE  tt1.uid = $1
+											AND tt1.deleted = 0
+											AND tt1.hidden = 0
+				</to>
+				<t3conv>1</t3conv>
+			</lookindb>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[newReservation]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[reservation]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[newPerson]</parameter>
+		</part>
+		<part>
+			<parameter>tx_nboevents_courses[e]</parameter>
+		</part>
+
+
 		<part>
 			<parameter>tx_nboevents_events[course]</parameter>
 			<lookindb>
@@ -101,6 +165,8 @@
 		<part>
 			<parameter>tx_nboevents_events[e]</parameter>
 		</part>
+
+
 	</uriparts>
 	<predefinedparts>
 		<part>
@@ -128,8 +194,23 @@
 			<value key="lightbox">99</value>
 		</valuemap>
 		<valuemap>
+			<parameter>tx_nboevents_courses[controller]</parameter>
+			<value key="">Events</value>
+			<value key="ort">Location</value>
+			<value key="">Course</value>
+			<value key="anmeldung">Reservation</value>
+		</valuemap>
+		<valuemap>
+			<parameter>tx_nboevents_courses[action]</parameter>
+			<value key="">show</value>
+			<value key="">list</value>
+			<value key="neu">new</value>
+			<value key="bearbeiten">edit</value>
+			<value key="loeschen">delete</value>
+		</valuemap>
+		<valuemap>
 			<parameter>tx_nboevents_events[controller]</parameter>
-			<value key="">Event</value>
+			<value key="">Events</value>
 			<value key="ort">Location</value>
 			<value key="">Course</value>
 			<value key="anmeldung">Reservation</value>
@@ -154,6 +235,10 @@
 			<value key="neu">new</value>
 			<value key="bearbeiten">edit</value>
 			<value key="loeschen">delete</value>
+		</valuemap>
+		<valuemap>
+			<parameter>tx_nboevents_courses[e][reskey]</parameter>
+			<value key="fehler">1</value>
 		</valuemap>
 		<valuemap>
 			<parameter>tx_nboevents_events[e][reskey]</parameter>
