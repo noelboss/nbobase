@@ -25,14 +25,14 @@
 		<part>
 			<parameter>tx_nbogallery_gallery[gallery]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nbogallery_domain_model_gallery WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nbogallery_domain_model_gallery as tt1, (SELECT COUNT(*) AS number FROM tx_nbogallery_domain_model_gallery WHERE title=(SELECT title FROM tx_nbogallery_domain_model_gallery WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1 AND tt1.deleted=0 AND tt1.hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
 		<part>
 			<parameter>tx_nboevents_events[event]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nboevents_domain_model_event as tt1, (SELECT COUNT(*) AS number FROM tx_nboevents_domain_model_event WHERE title=(SELECT title FROM tx_nboevents_domain_model_event WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1 AND tt1.deleted=0 AND tt1.hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -45,7 +45,7 @@
 		<part>
 			<parameter>tx_nboevents_events[location]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nboevents_domain_model_location as tt1, (SELECT COUNT(*) AS number FROM tx_nboevents_domain_model_location WHERE title=(SELECT title FROM tx_nboevents_domain_model_location WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1 AND tt1.deleted=0 AND tt1.hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -61,11 +61,11 @@
 		<part>
 			<parameter>tx_nboevents_events[e]</parameter>
 		</part>
-		
+
 		<part>
 			<parameter>tx_nbowishlist_whishlist[wish]</parameter>
 			<lookindb>
-				<to>SELECT title FROM tx_nbowishlist_domain_model_wish WHERE uid=$1 AND deleted=0 AND hidden=0</to>
+				<to>SELECT CONCAT(tt1.title,IF(tt2.number>1,CONCAT('-',tt2.number),'')) FROM tx_nbowishlist_domain_model_wish as tt1, (SELECT COUNT(*) AS number FROM tx_nbowishlist_domain_model_wish WHERE title=(SELECT title FROM tx_nbowishlist_domain_model_wish WHERE uid=$1)) AS tt2 WHERE tt1.uid=$1 AND tt1.deleted=0 AND tt1.hidden=0</to>
 				<t3conv>1</t3conv>
 			</lookindb>
 		</part>
@@ -142,13 +142,13 @@
 	<paramorder>
 		<param>L</param>
 	</paramorder>
-	
+
 	<!--partorder>
-        <part>pagepath</part>
-        <part>uriparts</part>
-        <part>predefinedparts</part>
-        <part>valuemaps</part>
-    </partorder-->
+		<part>pagepath</part>
+		<part>uriparts</part>
+		<part>predefinedparts</part>
+		<part>valuemaps</part>
+	</partorder-->
 
 	<cooluris>1</cooluris>
 </cooluri>
