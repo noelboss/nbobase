@@ -19,7 +19,7 @@
 	p {
 		margin-bottom: 1.5em;
 	}
-	
+
 	a {
 		color: #005580;
 		text-decoration: none;
@@ -41,13 +41,13 @@
 		text-shadow: 0px 0px 5px rgba(0,0,0,0.75);
 		filter: dropshadow(color=#000000, offx=0, offy=0);
 	}
-	
+
 	.contentHeader {
 		display: block;
 		height: 220px;
 		margin-bottom: 20px;
 	}
-	
+
 	.hero-unit	{
 		padding: 140px 60px 60px;
 	}
@@ -74,7 +74,6 @@
 	.containerWrapper {
 		background: #fff;
 		position: relative;
-		bottom: -6px;
 	}
 
 	.hero-unit .inner,
@@ -89,7 +88,7 @@
 		margin-right: 20px;
 	}
 
-	div.csc-mailform ol, 
+	div.csc-mailform ol,
 	div.csc-mailform ol li {
 		list-style-type: none;
 	}
@@ -116,12 +115,12 @@
 		margin-bottom: 0.5em;
 		line-height: 1;
 	}
-	
+
 	.container h1,
 	.container h2 {
 		letter-spacing: -1px;
 	}
-	
+
 	h1 small,
 	h2 small,
 	h3 small,
@@ -132,7 +131,7 @@
 		font-weight: normal;
 		color: inherit;
 	}
-	
+
 	.hero-unit h1{
 		padding-top: 9px;
 	}
@@ -155,11 +154,11 @@
 		line-height: 2.2em;
 		font-family: CalligraffitiRegular, "Trebuchet MS","Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
-	
+
 	.navbar-fixed-top, .navbar-fixed-bottom {
 		z-index: 11;
 	}
-	
+
 	.navbar-inner {
 		background-color:  #1b1b1b;
 		background-image: -moz-linear-gradient(top, #222222, #111111);
@@ -172,21 +171,21 @@
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 		border-bottom: 1px solid #333;
 	}
-	
+
 	.navbar .nav {
 		float: right;
 	}
-	
+
 	.navbar .nav li a {
 		line-height: 2em;
 	}
-	
+
 	.navbar .logo {
 		float: left;
 		position: relative;
 		height: 30px;
 		width: 320px;
-		margin: 0 0 0 0px; 
+		margin: 0 0 0 0px;
 		padding: 0;
 		font-size: 1em;
 	}
@@ -233,7 +232,7 @@
 		padding-top: 15px;
 	}
 
-	h2 small, 
+	h2 small,
 	h1 small{
 		font-family: QuattrocentoRomanRegular, Georgia"Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
@@ -248,32 +247,33 @@
 	.hero-unit .inner .actionIcons {
 		text-align: center;
 	}
-	.hero-unit .inner .actionIcons a { 
+	.hero-unit .inner .actionIcons a {
 		color: #fff;
 		margin-right: 15px;
 	}
-	.hero-unit .inner .actionIcons a i { 
+	.hero-unit .inner .actionIcons a i {
 		vertical-align: -1px;
 		margin-left: 6px;
 	}
 
-	[class^="icon-"], 
+	[class^="icon-"],
 	[class*=" icon-"] {
 		vertical-align: -2px;
 	}
-	
-	h3 [class^="icon-"], 
+
+	h3 [class^="icon-"],
 	h3 [class*=" icon-"] {
 		vertical-align: 0;
 		margin-right: 5px;
 	}
-	
+
 	figcaption {
 		font-style: italic;
 		margin: 10px 4px 4px;
 		color: #999;
 	}
-	
+
+
 	footer p {
 		color: #999;
 		font-size: 0.8em;
@@ -282,9 +282,10 @@
 		color: #777;
 	}
 
-	.copyright {
+	footer .container {
+		padding-top: 2em;
 	}
-	
+
 	.footerlogo {
 		float: right;
 		color: #999;
@@ -299,7 +300,7 @@
 	.footerlogo:hover h5 {
 		visibility: visible;
 	}
-	
+
 	.footerlogo h4 {
 		margin-top: 1em;
 		font-weight: bold;
@@ -309,7 +310,7 @@
 		color: #888;
 		text-decoration: none;
 	}
-	
+
 	.csc-textpic-intext-left-nowrap .csc-textpic-text {
 		margin-left: 0;
 		overflow: hidden;
@@ -326,7 +327,7 @@
 		-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.075);
 		box-shadow: 0 1px 1px rgba(0,0,0,0.075);
 	}
-	
+
 	.borderbox .csc-textpic-image a {
 		display: block;
 		padding: 0;
@@ -339,12 +340,12 @@
 		-moz-box-shadow: none;
 		box-shadow: none;
 	}
-	
+
 	.formError {
 		color: #b94a48;
 	}
 }
-@media (min-width: 979px) { 
+@media (min-width: 979px) {
 	body {
 		background: #eee;
 	}
