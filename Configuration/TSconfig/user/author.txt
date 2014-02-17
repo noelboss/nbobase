@@ -63,7 +63,7 @@ options {
 
 	# Shows the ID in front of the Page Title
 	pageTree{
-		showPageIdWithTitle = 1
+		showPageIdWithTitle = 0
 		disableIconLinkToContextmenu = 1
 	}
 
