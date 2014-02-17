@@ -1,16 +1,16 @@
 # Setup
 library.Visual = COA
-library.Visual {    
-	10 = IMG_RESOURCE  
+library.Visual {
+	10 = IMG_RESOURCE
 	10 {
 		#file = EXT:nbobase/Resources/Public/img/header.jpg
 		file {
 			import = uploads/media/
-			import {  
+			import {
 				data = levelmedia: -1, "slide"
 				override.field = media
 				# Add a specific Image
-				# listNum = 0 
+				# listNum = 0
 				listNum = rand
 				# just when field media is present...
 				override.field = media
@@ -23,11 +23,10 @@ library.Visual {
 }
 
 library.VisualNo = TEXT
-library.VisualNo {    
+library.VisualNo {
 	value = noVisual
 	if.isFalse.data = levelmedia: -1, "slide"
 }
 
 library.VisualContent < library.Visual
-library.VisualContent.stdWrap.noTrimWrap = |<div class="contentHeader" |></div>|
 library.VisualContent.10.file.height = 300c
