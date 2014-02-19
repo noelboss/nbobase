@@ -60,8 +60,6 @@
 						infowindow.setContent(address);
 						infowindow.open(map, marker);
 					}
-				} else {
-					//console.log([results,status]);
 				}
 			});
 		});
