@@ -344,6 +344,10 @@
 	.formError {
 		color: #b94a48;
 	}
+
+	.tx-powermail form > h3 {
+		display: none;
+	}
 }
 @media (min-width: 979px) {
 	body {
