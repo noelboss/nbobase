@@ -6,12 +6,13 @@ config {
 
 	# Don't display non translated pages
 	sys_language_overlay = 0
-	
+
 	# Add L Parameter to URL
 	linkVars := addToList(L)
 
 	sys_language_uid = 0
 	language = de
-	locale_all = de_DE
-	htmlTag_langKey = de-CH
+	language_alt = de
+	locale_all = de_CH.UTF-8
+	htmlTag_langKey = de
 }
