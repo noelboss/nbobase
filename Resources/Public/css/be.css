@@ -23,3 +23,7 @@
 #typo3-alt-doc-php .t3-icon-document-save-new {
 	display: none;
 }
+
+#typo3-docheader .left .buttongroup {
+	margin-right: 200px;
+}
