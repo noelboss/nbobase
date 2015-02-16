@@ -65,7 +65,7 @@
 			<parameter>tx_nboevents_courses[location]</parameter>
 			<lookindb>
 				<to>
-					SELECT Concat(tt1.title, IF(tt2.number > 1, Concat('-', tt1.uid), ''))
+					SELECT Concat(tt1.title, IF(tt2.number > 1, Concat('-', tt2.number), ''))
 					FROM	tx_nboevents_domain_model_location AS tt1,
 							(SELECT uid, Count(*) AS number
 							FROM   tx_nboevents_domain_model_location
